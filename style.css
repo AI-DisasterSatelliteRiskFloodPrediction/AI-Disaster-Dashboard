@@ -101,3 +101,16 @@ footer {
     text-align: center;
     padding: 20px;
 }
+#map{
+
+height:500px;
+
+width:90%;
+
+margin:auto;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+}
