@@ -2,12 +2,23 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rwanda Disaster Monitoring Dashboard</title>
+<title>
+Rwanda Disaster Monitoring Dashboard
+</title>
 
 <link rel="stylesheet" href="style.css">
+
+
+<!-- Leaflet Map Library -->
+
+<link rel="stylesheet" 
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
 
 </head>
 
@@ -15,27 +26,28 @@
 <body>
 
 
-<!-- Navigation Menu -->
-
 <nav>
 
-<h2>AI Disaster Dashboard</h2>
+<div class="logo">
+AI Disaster Dashboard
+</div>
+
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
 
-<li><a href="dashboard.html">
+
+<li>
+<a href="dashboard.html">
 Dashboard
-</a></li>
+</a>
+</li>
 
-<li><a href="about.html">
-About
-</a></li>
-
-<li><a href="contact.html">
-Contact
-</a></li>
 
 </ul>
 
@@ -43,88 +55,139 @@ Contact
 
 
 
-<!-- Dashboard Header -->
-
 <section class="dashboard-header">
+
 
 <h1>
 🌍 Rwanda Disaster Monitoring Dashboard
 </h1>
 
+
 <p>
-AI-powered satellite monitoring system for flood and disaster risk assessment.
+AI-driven satellite analysis for flood detection
+and disaster risk reduction.
 </p>
+
 
 </section>
 
 
 
 
-<!-- Dashboard Cards -->
+
+<!-- MAP SECTION -->
+
+<section>
+
+
+<h2>
+🇷🇼 Rwanda Flood Risk Map
+</h2>
+
+
+<div id="map"></div>
+
+
+</section>
+
+
+
+
+
+
+<!-- AI CARDS -->
+
 
 <section class="dashboard-container">
 
 
 <div class="card">
 
+
 <h2>
 🛰️ Satellite Data
 </h2>
 
+
 <p>
-Access Earth Observation data from Sentinel satellites
-for monitoring floods, rainfall and environmental changes.
+Sentinel satellite observation monitoring.
 </p>
 
 
-<button>
-View Satellite Data
-</button>
+<h3>
+Source:
+</h3>
+
+<p>
+Sentinel-1 / Sentinel-2
+</p>
+
 
 </div>
 
 
 
+
+
 <div class="card">
+
 
 <h2>
 🤖 AI Flood Detection
 </h2>
 
+
 <p>
-Artificial Intelligence models analyze satellite imagery
-to detect potential flood risk areas.
+Machine Learning flood probability analysis.
 </p>
 
 
-<button>
-Run AI Analysis
-</button>
+<h1>
+78%
+</h1>
+
+
+<p>
+Flood Detection Confidence
+</p>
+
 
 </div>
+
+
 
 
 
 <div class="card">
 
+
 <h2>
 📊 Risk Analysis
 </h2>
 
+
 <p>
-Generate disaster risk maps including
-High, Medium and Low flood vulnerability zones.
+Current estimated flood risk:
 </p>
 
 
-<button>
-View Risk Map
-</button>
+<h1>
+HIGH
+</h1>
+
+
+<p>
+Risk Level
+</p>
+
 
 </div>
 
 
+
 </section>
+
+
 
 
 
@@ -132,11 +195,57 @@ View Risk Map
 <footer>
 
 <p>
-© 2026 AI Disaster Dashboard |
-Satellite Intelligence for Climate Resilience
+© 2026 AI Disaster Satellite Risk Platform
 </p>
 
 </footer>
+
+
+
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+
+<script>
+
+
+// Rwanda Map
+
+var map = L.map('map').setView([-1.94,30.06],8);
+
+
+
+L.tileLayer(
+'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+{
+
+attribution:
+'OpenStreetMap'
+
+}
+
+).addTo(map);
+
+
+
+
+// Rwanda marker
+
+L.marker([-1.95,30.06])
+.addTo(map)
+.bindPopup(
+
+"🇷🇼 Rwanda<br>AI Flood Monitoring Center"
+
+)
+.openPopup();
+
+
+
+</script>
+
 
 
 </body>
