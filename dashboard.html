@@ -13,13 +13,6 @@ Rwanda Disaster Monitoring Dashboard
 
 <link rel="stylesheet" href="style.css">
 
-
-<!-- Leaflet Map Library -->
-
-<link rel="stylesheet" 
-href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
-
 </head>
 
 
@@ -57,7 +50,6 @@ Dashboard
 
 <section class="dashboard-header">
 
-
 <h1>
 🌍 Rwanda Disaster Monitoring Dashboard
 </h1>
@@ -68,39 +60,33 @@ AI-driven satellite analysis for flood detection
 and disaster risk reduction.
 </p>
 
-
 </section>
 
 
 
 
 
-<!-- MAP SECTION -->
+<!-- FLOOD RISK MAP SECTION -->
 
-<section>
+<section class="risk-map">
 
-
-<h2>
-🇷🇼 Rwanda Flood Risk Map
-</h2>
-
-
-<div class="risk-map">
 
 <h2>
 🇷🇼 AI Flood Risk Classification Map
 </h2>
+
 
 <img 
 src="images/Rwanda_Flood_Risk_Map.png"
 width="90%"
 alt="Rwanda Flood Risk Map">
 
-<p>
-🟢 Low Risk | 🟡 Medium Risk | 🔴 High Risk
-</p>
 
-</div>
+<p>
+🟢 Low Risk |
+🟡 Medium Risk |
+🔴 High Risk
+</p>
 
 
 </section>
@@ -112,12 +98,11 @@ alt="Rwanda Flood Risk Map">
 
 <!-- AI CARDS -->
 
-
 <section class="dashboard-container">
 
 
-<div class="card">
 
+<div class="card">
 
 <h2>
 🛰️ Satellite Data
@@ -133,10 +118,10 @@ Sentinel satellite observation monitoring.
 Source:
 </h3>
 
+
 <p>
 Sentinel-1 / Sentinel-2
 </p>
-
 
 </div>
 
@@ -207,6 +192,8 @@ Risk Level
 
 
 
+<!-- FOOTER -->
+
 <footer>
 
 <p>
@@ -215,51 +202,6 @@ Risk Level
 
 </footer>
 
-
-
-
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-
-
-<script>
-
-
-// Rwanda Map
-
-var map = L.map('map').setView([-1.94,30.06],8);
-
-
-
-L.tileLayer(
-'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-{
-
-attribution:
-'OpenStreetMap'
-
-}
-
-).addTo(map);
-
-
-
-
-// Rwanda marker
-
-L.marker([-1.95,30.06])
-.addTo(map)
-.bindPopup(
-
-"🇷🇼 Rwanda<br>AI Flood Monitoring Center"
-
-)
-.openPopup();
-
-
-
-</script>
 
 
 
