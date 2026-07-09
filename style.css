@@ -114,3 +114,48 @@ border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
 
 }
+.analytics-panel{
+
+padding:40px;
+
+text-align:center;
+
+}
+
+
+
+.analytics-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.analytics-card{
+
+background:white;
+
+width:220px;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+
+
+.analytics-card h1{
+
+font-size:40px;
+
+}
