@@ -1,57 +1,102 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #f4f8fb;
     color: #1c2b39;
 }
 
 
-header {
-    background: #063970;
+/* Navigation */
+
+nav {
+    background: #062b55;
     color: white;
-    padding: 40px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
 
 .logo {
-    width: 150px;
-    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 
-h1 {
-    font-size: 40px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 
-h2 {
-    color: #063970;
-    border-bottom: 2px solid #063970;
-    padding-bottom: 10px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+
+/* Hero */
+
+.hero {
+    background: linear-gradient(
+    rgba(0,50,100,0.8),
+    rgba(0,20,50,0.8)
+    ),
+    url("MY LOG SERGE.png");
+
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+
+.hero img {
+    border-radius: 50%;
+}
+
+
+.hero h1 {
+    font-size: 45px;
+}
+
+
+.hero h2 {
+    color: white;
+}
+
+
+.button {
+    display: inline-block;
+    background: #00a8ff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+
+
+/* Sections */
 
 section {
     background: white;
-    margin: 25px;
-    padding: 30px;
+    margin: 30px;
+    padding: 35px;
     border-radius: 15px;
 }
 
 
-ul {
-    line-height: 2;
-}
-
-
-.qr {
-    width: 220px;
+section h2 {
+    color: #062b55;
 }
 
 
 footer {
-    background: #063970;
+    background: #062b55;
     color: white;
     text-align: center;
     padding: 20px;
