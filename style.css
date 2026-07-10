@@ -1,5 +1,5 @@
-/* AI Disaster Satellite Research Portfolio
-   Professional Research Website Styling
+/* AI Disaster Research Portfolio
+   Professional Research Lab Design
 */
 
 
@@ -10,26 +10,130 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
 body {
 
     font-family: "Segoe UI", Arial, sans-serif;
-    line-height: 1.6;
-    background: #f7f9fc;
+
+    background: #f5f8fc;
+
     color: #222;
+
+    line-height: 1.7;
 
 }
 
 
-/* Header / Hero Section */
+
+/* =====================
+   Navigation Bar
+===================== */
+
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    background: #ffffff;
+
+    padding: 15px 40px;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+
+    z-index: 1000;
+
+}
+
+
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+
+.brand {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #0b3d91;
+
+    text-decoration: none;
+
+}
+
+
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+
+}
+
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: 600;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: #0066cc;
+
+}
+
+
+
+
+
+/* =====================
+   Hero Section
+===================== */
+
 
 header {
 
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(
-        135deg,
-        #0b3d91,
-        #0066cc
+
+    padding: 80px 20px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #0b3d91,
+    #0077cc
     );
 
     color: white;
@@ -37,91 +141,113 @@ header {
 }
 
 
+
 .logo {
 
-    width: 130px;
-    height: 130px;
+    width: 140px;
+
+    height: 140px;
+
     object-fit: contain;
-    margin-bottom: 20px;
+
+    margin-bottom: 25px;
 
 }
+
 
 
 header h1 {
 
-    font-size: 42px;
-    max-width: 1000px;
+    max-width: 1100px;
+
     margin: auto;
-    margin-bottom: 15px;
+
+    font-size: 42px;
 
 }
+
 
 
 header h2 {
 
-    font-size: 24px;
+    margin-top: 20px;
+
     font-weight: 400;
-    margin-bottom: 20px;
 
 }
+
 
 
 header p {
 
     max-width: 850px;
-    margin: auto;
+
+    margin: 25px auto;
+
     font-size: 18px;
 
 }
 
 
 
-/* Buttons */
+
+
+/* =====================
+   Buttons
+===================== */
+
 
 .button {
 
     display: inline-block;
-    margin: 25px 8px;
-    padding: 12px 25px;
+
+    padding: 12px 28px;
+
+    margin: 10px;
 
     background: white;
-    color: #0b3d91;
 
-    text-decoration: none;
+    color: #0b3d91;
 
     border-radius: 30px;
 
-    font-weight: bold;
+    text-decoration: none;
 
-    transition: 0.3s;
+    font-weight: bold;
 
 }
 
 
+
 .button:hover {
 
-    background: #e6f0ff;
     transform: translateY(-3px);
 
 }
 
 
 
-/* Sections */
+
+
+/* =====================
+   Research Sections
+===================== */
+
 
 section {
 
+    max-width: 1100px;
+
+    margin: 45px auto;
+
     background: white;
 
-    margin: 40px auto;
+    padding: 45px;
 
-    padding: 40px;
+    border-radius: 18px;
 
-    max-width: 1000px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
 
 }
 
@@ -131,79 +257,131 @@ section h2 {
 
     color: #0b3d91;
 
-    margin-bottom: 20px;
-
     font-size: 30px;
 
-}
-
-
-
-section p {
-
-    font-size: 17px;
+    margin-bottom: 20px;
 
 }
 
 
 
-/* Research Focus List */
 
-ul {
 
-    padding-left: 25px;
+/* Research Cards */
+
+
+section ul {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 20px;
+
+    list-style: none;
 
 }
 
 
-li {
 
-    margin: 12px 0;
+section li {
 
-    font-size: 17px;
+    background: #f0f6ff;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #0066cc;
 
 }
+
+
+
+
+
+/* Dashboard Preview */
+
+
+#dashboard {
+
+    text-align: center;
+
+}
+
+
+
+.dashboard-image {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    border-radius: 15px;
+
+    margin: 25px auto;
+
+}
+
+
 
 
 
 /* Footer */
 
+
 footer {
 
-    text-align: center;
+    text-align:center;
 
-    padding: 25px;
+    padding:30px;
 
-    background: #0b3d91;
+    background:#0b3d91;
 
-    color: white;
-
-    margin-top: 50px;
+    color:white;
 
 }
 
 
 
-/* Mobile Responsive */
+
+
+/* Mobile */
+
 
 @media(max-width:768px){
 
 
-header h1 {
+.nav-container{
 
-    font-size: 30px;
-
-}
-
-
-header h2 {
-
-    font-size: 20px;
+    flex-direction:column;
 
 }
 
 
-section {
+
+.nav-links{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    margin-top:15px;
+
+}
+
+
+
+header h1{
+
+    font-size:30px;
+
+}
+
+
+
+section{
 
     margin:20px;
 
