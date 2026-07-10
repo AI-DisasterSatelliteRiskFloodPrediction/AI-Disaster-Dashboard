@@ -1,81 +1,108 @@
-body {
+/* AI Disaster Satellite Research Portfolio
+   Professional Research Website Styling
+*/
+
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f8fb;
-    color: #1c2b39;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-/* Navigation */
+body {
 
-nav {
-    background: #062b55;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background: #f7f9fc;
+    color: #222;
+
+}
+
+
+/* Header / Hero Section */
+
+header {
+
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(
+        135deg,
+        #0b3d91,
+        #0066cc
+    );
+
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+
 }
 
 
 .logo {
+
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 20px;
+
+}
+
+
+header h1 {
+
+    font-size: 42px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 15px;
+
+}
+
+
+header h2 {
+
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400;
+    margin-bottom: 20px;
+
 }
 
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+header p {
+
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+
 }
 
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-
-/* Hero */
-
-.hero {
-    background: linear-gradient(
-    rgba(0,50,100,0.8),
-    rgba(0,20,50,0.8)
-    ),
-    url("MY LOG SERGE.png");
-
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-
-.hero img {
-    border-radius: 50%;
-}
-
-
-.hero h1 {
-    font-size: 45px;
-}
-
-
-.hero h2 {
-    color: white;
-}
-
+/* Buttons */
 
 .button {
+
     display: inline-block;
-    background: #00a8ff;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
+    margin: 25px 8px;
+    padding: 12px 25px;
+
+    background: white;
+    color: #0b3d91;
+
     text-decoration: none;
-    margin-top: 20px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.button:hover {
+
+    background: #e6f0ff;
+    transform: translateY(-3px);
+
 }
 
 
@@ -83,79 +110,106 @@ nav ul li a {
 /* Sections */
 
 section {
+
     background: white;
-    margin: 30px;
-    padding: 35px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    max-width: 1000px;
+
     border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
 }
+
 
 
 section h2 {
-    color: #062b55;
+
+    color: #0b3d91;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
 }
 
+
+
+section p {
+
+    font-size: 17px;
+
+}
+
+
+
+/* Research Focus List */
+
+ul {
+
+    padding-left: 25px;
+
+}
+
+
+li {
+
+    margin: 12px 0;
+
+    font-size: 17px;
+
+}
+
+
+
+/* Footer */
 
 footer {
-    background: #062b55;
-    color: white;
+
     text-align: center;
-    padding: 20px;
-}
-#map{
 
-height:500px;
+    padding: 25px;
 
-width:90%;
+    background: #0b3d91;
 
-margin:auto;
+    color: white;
 
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-
-}
-.analytics-panel{
-
-padding:40px;
-
-text-align:center;
+    margin-top: 50px;
 
 }
 
 
 
-.analytics-container{
+/* Mobile Responsive */
 
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-flex-wrap:wrap;
-
-}
+@media(max-width:768px){
 
 
+header h1 {
 
-.analytics-card{
-
-background:white;
-
-width:220px;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    font-size: 30px;
 
 }
 
 
+header h2 {
 
-.analytics-card h1{
+    font-size: 20px;
 
-font-size:40px;
+}
+
+
+section {
+
+    margin:20px;
+
+    padding:25px;
+
+}
+
 
 }
