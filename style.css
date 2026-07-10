@@ -1,267 +1,327 @@
-body{
+/* 
+AI Disaster Risk Dashboard
+Professional Dashboard Styling
+*/
 
-font-family:
-Arial, Helvetica, sans-serif;
 
-margin:0;
+body {
 
-background:#f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f7fb;
+    color: #1f2937;
 
-color:#222;
+}
+
+
+/* HEADER */
+
+header {
+
+    background: #0b3d91;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.logo-section {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
+.logo-section img {
+
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+
+.logo-section h1 {
+
+    margin: 0;
+    font-size: 28px;
+
+}
+
+
+.logo-section p {
+
+    margin-top: 8px;
+    font-size: 15px;
+
+}
+
+
+.status {
+
+    text-align: right;
+    font-size: 15px;
 
 }
 
 
 
-header{
+/* STATISTICS CARDS */
 
-background:#0b3d91;
 
-color:white;
+.cards {
 
-padding:20px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+    padding: 30px;
 
 }
 
 
 
-.logo-section{
+.card {
 
-display:flex;
-
-align-items:center;
-
-gap:20px;
-
-}
-
-
-.logo-section img{
-
-width:80px;
-
-height:80px;
-
-border-radius:50%;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 
 }
 
 
 
-.status{
+.card h2 {
 
-text-align:right;
-
-}
-
-
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
-
-gap:20px;
-
-padding:25px;
+    font-size: 35px;
+    margin: 10px 0;
 
 }
 
 
 
+.high {
 
-.card{
-
-background:white;
-
-padding:20px;
-
-border-radius:12px;
-
-box-shadow:
-0 4px 10px rgba(0,0,0,0.1);
-
-text-align:center;
+    border-left: 8px solid red;
 
 }
 
 
 
-.high{
+.medium {
 
-border-left:8px solid red;
-
-}
-
-
-.medium{
-
-border-left:8px solid orange;
-
-}
-
-
-.low{
-
-border-left:8px solid green;
+    border-left: 8px solid orange;
 
 }
 
 
 
-.main-dashboard{
+.low {
 
-display:grid;
-
-grid-template-columns:
-2fr 1fr;
-
-gap:20px;
-
-padding:25px;
+    border-left: 8px solid green;
 
 }
 
 
+
+/* MAIN DASHBOARD */
+
+
+.main-dashboard {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 30px;
+
+}
 
 
 .map-box,
 .prediction,
 .climate,
-.alert{
+.alert {
 
-background:white;
-
-padding:20px;
-
-border-radius:15px;
-
-box-shadow:
-0 4px 12px rgba(0,0,0,.1);
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
 
 }
 
 
 
-.map{
-
-height:400px;
-
-background:#dce8f7;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-}
+/* MAP SECTION */
 
 
+.map {
 
-.legend span{
+    height: 400px;
+    background: #dce8f7;
+    border-radius: 12px;
 
-margin:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-display:inline-block;
+    text-align:center;
 
 }
 
 
 
-.prediction-card{
+.legend {
 
-background:#eef3ff;
-
-padding:20px;
-
-border-radius:10px;
+    margin-top:20px;
 
 }
 
 
 
-.danger{
+.legend span {
 
-color:red;
-
-}
-
-
-
-.indicator{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(200px,1fr));
-
-gap:20px;
+    margin:10px;
+    font-weight:bold;
 
 }
 
 
 
-.alert{
-
-margin:25px;
-
-}
+/* AI PREDICTION */
 
 
+.prediction-card {
 
-.alert-box{
-
-background:#ffe6e6;
-
-padding:25px;
-
-border-left:10px solid red;
-
-font-size:18px;
+    background:#eef3ff;
+    padding:20px;
+    border-radius:12px;
 
 }
 
 
 
-footer{
+.prediction-card h1 {
 
-background:#0b3d91;
-
-color:white;
-
-padding:20px;
-
-text-align:center;
+    font-size:45px;
+    margin:10px 0;
 
 }
 
 
 
-@media(max-width:800px){
+.danger {
 
-.main-dashboard{
-
-grid-template-columns:1fr;
+    color:red;
 
 }
 
 
-header{
 
-flex-direction:column;
+/* CLIMATE INDICATORS */
+
+
+.climate {
+
+    margin:30px;
 
 }
+
+
+
+.indicator {
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+
+}
+
+
+
+.indicator div {
+
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+
+}
+
+
+
+/* ALERT SYSTEM */
+
+
+.alert {
+
+    margin:30px;
+
+}
+
+
+
+.alert-box {
+
+    background:#ffe6e6;
+    border-left:10px solid red;
+    padding:25px;
+    font-size:18px;
+    border-radius:10px;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:20px;
+
+}
+
+
+
+/* MOBILE RESPONSIVE */
+
+
+@media(max-width:900px){
+
+
+header {
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+.status {
+
+    text-align:center;
+    margin-top:15px;
+
+}
+
+
+
+.main-dashboard {
+
+    grid-template-columns:1fr;
+
+}
+
 
 }
