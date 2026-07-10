@@ -1,393 +1,267 @@
-/* AI Disaster Research Portfolio
-   Professional Research Lab Design
-*/
+body{
 
+font-family:
+Arial, Helvetica, sans-serif;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+margin:0;
 
+background:#f4f7fb;
 
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-body {
-
-    font-family: "Segoe UI", Arial, sans-serif;
-
-    background: #f5f8fc;
-
-    color: #222;
-
-    line-height: 1.7;
+color:#222;
 
 }
 
 
 
-/* =====================
-   Navigation Bar
-===================== */
+header{
 
+background:#0b3d91;
 
-.navbar {
+color:white;
 
-    position: sticky;
+padding:20px;
 
-    top: 0;
+display:flex;
 
-    background: #ffffff;
+justify-content:space-between;
 
-    padding: 15px 40px;
-
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-
-    z-index: 1000;
+align-items:center;
 
 }
 
 
 
-.nav-container {
+.logo-section{
 
-    display: flex;
+display:flex;
 
-    justify-content: space-between;
+align-items:center;
 
-    align-items: center;
+gap:20px;
 
-    max-width: 1200px;
+}
 
-    margin: auto;
+
+.logo-section img{
+
+width:80px;
+
+height:80px;
+
+border-radius:50%;
 
 }
 
 
 
-.brand {
+.status{
 
-    font-size: 22px;
-
-    font-weight: bold;
-
-    color: #0b3d91;
-
-    text-decoration: none;
-
-}
-
-
-
-.nav-links {
-
-    display: flex;
-
-    list-style: none;
-
-    gap: 25px;
-
-}
-
-
-
-.nav-links a {
-
-    text-decoration: none;
-
-    color: #333;
-
-    font-weight: 600;
-
-}
-
-
-
-.nav-links a:hover {
-
-    color: #0066cc;
+text-align:right;
 
 }
 
 
 
 
+.cards{
 
-/* =====================
-   Hero Section
-===================== */
+display:grid;
 
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
 
-header {
+gap:20px;
 
-    text-align: center;
-
-    padding: 80px 20px;
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #0b3d91,
-    #0077cc
-    );
-
-    color: white;
-
-}
-
-
-
-.logo {
-
-    width: 140px;
-
-    height: 140px;
-
-    object-fit: contain;
-
-    margin-bottom: 25px;
-
-}
-
-
-
-header h1 {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    font-size: 42px;
-
-}
-
-
-
-header h2 {
-
-    margin-top: 20px;
-
-    font-weight: 400;
-
-}
-
-
-
-header p {
-
-    max-width: 850px;
-
-    margin: 25px auto;
-
-    font-size: 18px;
+padding:25px;
 
 }
 
 
 
 
+.card{
 
-/* =====================
-   Buttons
-===================== */
+background:white;
 
+padding:20px;
 
-.button {
+border-radius:12px;
 
-    display: inline-block;
+box-shadow:
+0 4px 10px rgba(0,0,0,0.1);
 
-    padding: 12px 28px;
-
-    margin: 10px;
-
-    background: white;
-
-    color: #0b3d91;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-
-    font-weight: bold;
+text-align:center;
 
 }
 
 
 
-.button:hover {
+.high{
 
-    transform: translateY(-3px);
+border-left:8px solid red;
+
+}
+
+
+.medium{
+
+border-left:8px solid orange;
+
+}
+
+
+.low{
+
+border-left:8px solid green;
 
 }
 
 
 
+.main-dashboard{
 
+display:grid;
 
-/* =====================
-   Research Sections
-===================== */
+grid-template-columns:
+2fr 1fr;
 
+gap:20px;
 
-section {
-
-    max-width: 1100px;
-
-    margin: 45px auto;
-
-    background: white;
-
-    padding: 45px;
-
-    border-radius: 18px;
-
-    box-shadow:
-    0 8px 25px rgba(0,0,0,0.08);
-
-}
-
-
-
-section h2 {
-
-    color: #0b3d91;
-
-    font-size: 30px;
-
-    margin-bottom: 20px;
+padding:25px;
 
 }
 
 
 
 
+.map-box,
+.prediction,
+.climate,
+.alert{
 
-/* Research Cards */
+background:white;
 
+padding:20px;
 
-section ul {
+border-radius:15px;
 
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap: 20px;
-
-    list-style: none;
-
-}
-
-
-
-section li {
-
-    background: #f0f6ff;
-
-    padding: 20px;
-
-    border-radius: 12px;
-
-    border-left: 5px solid #0066cc;
+box-shadow:
+0 4px 12px rgba(0,0,0,.1);
 
 }
 
 
 
+.map{
 
+height:400px;
 
-/* Dashboard Preview */
+background:#dce8f7;
 
+display:flex;
 
-#dashboard {
+flex-direction:column;
 
-    text-align: center;
+justify-content:center;
 
-}
-
-
-
-.dashboard-image {
-
-    width: 90%;
-
-    max-width: 900px;
-
-    border-radius: 15px;
-
-    margin: 25px auto;
+align-items:center;
 
 }
 
 
 
+.legend span{
 
+margin:10px;
 
-/* Footer */
-
-
-footer {
-
-    text-align:center;
-
-    padding:30px;
-
-    background:#0b3d91;
-
-    color:white;
+display:inline-block;
 
 }
 
 
 
+.prediction-card{
 
+background:#eef3ff;
 
-/* Mobile */
+padding:20px;
 
-
-@media(max-width:768px){
-
-
-.nav-container{
-
-    flex-direction:column;
+border-radius:10px;
 
 }
 
 
 
-.nav-links{
+.danger{
 
-    flex-direction:column;
-
-    text-align:center;
-
-    margin-top:15px;
+color:red;
 
 }
 
 
 
-header h1{
+.indicator{
 
-    font-size:30px;
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.alert{
+
+margin:25px;
 
 }
 
 
 
-section{
+.alert-box{
 
-    margin:20px;
+background:#ffe6e6;
 
-    padding:25px;
+padding:25px;
+
+border-left:10px solid red;
+
+font-size:18px;
 
 }
 
+
+
+footer{
+
+background:#0b3d91;
+
+color:white;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+
+
+@media(max-width:800px){
+
+.main-dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+
+header{
+
+flex-direction:column;
+
+}
 
 }
