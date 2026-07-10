@@ -1,209 +1,210 @@
 /*
 AI Disaster Risk Dashboard
-Dashboard Dynamic Functions
+Leaflet Interactive Flood Risk Map
 
-Prototype Version 1
+Version: 1.0
 */
 
 
 // ===============================
-// Update Dashboard Date
-// ===============================
-
-const currentDate = new Date();
-
-const dateElement = document.getElementById("date");
-
-
-if (dateElement) {
-
-    dateElement.innerHTML =
-    currentDate.toDateString();
-
-}
-
-
-
-// ===============================
-// AI Disaster Prediction Data
+// Create Rwanda Map
 // ===============================
 
 
-const disasterPrediction = {
+const disasterMap = L.map('map').setView(
 
+    [-1.9403, 29.8739],
 
-    location:
-    "Northern Province, Rwanda",
+    8
 
-
-    hazard:
-    "Flood",
-
-
-    probability:
-    78,
-
-
-    riskLevel:
-    "HIGH",
-
-
-    confidence:
-    89,
-
-
-    model:
-    "Random Forest + Sentinel-2"
-
-
-};
-
-
-
-
-// ===============================
-// Display AI Analysis in Console
-// ===============================
-
-
-console.log(
-"AI Disaster Prediction Results",
-disasterPrediction
 );
 
 
 
 
 // ===============================
-// Future Data Integration Structure
+// Add OpenStreetMap Layer
 // ===============================
 
 
-const satelliteData = {
+L.tileLayer(
 
+    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 
-    source:
-    "Sentinel-1 / Sentinel-2",
+    {
 
+        attribution:
+        '© OpenStreetMap contributors'
 
-    platform:
-    "Google Earth Engine",
+    }
 
-
-    monitoring:
-    "Active"
-
-
-};
-
-
-
-console.log(
-"Satellite Monitoring:",
-satelliteData
-);
+).addTo(disasterMap);
 
 
 
 
 // ===============================
-// Risk Classification Function
+// Risk Layer Groups
 // ===============================
 
 
-function classifyRisk(probability){
+const highRisk =
+L.layerGroup();
 
 
-    if(probability >= 70){
-
-        return "HIGH";
-
-    }
+const mediumRisk =
+L.layerGroup();
 
 
-    else if(probability >= 40){
+const lowRisk =
+L.layerGroup();
 
-        return "MEDIUM";
-
-    }
-
-
-    else {
-
-        return "LOW";
-
-    }
-
-
-}
-
-
-
-
-const currentRisk =
-classifyRisk(
-disasterPrediction.probability
-);
-
-
-
-console.log(
-"Current Risk Level:",
-currentRisk
-);
 
 
 
 
 // ===============================
-// Future AI Alert System
+// High Risk Areas
 // ===============================
 
 
-function generateAlert(risk){
+L.marker([-1.5000, 29.7000])
 
+.bindPopup(
 
-    if(risk === "HIGH"){
+    `
+    <b>🔴 HIGH FLOOD RISK</b>
+    <br>
+    Northern Province
+    <br>
+    Probability: 78%
+    `
 
+)
 
-        return "⚠️ Flood risk detected. Activate early warning procedures.";
+.addTo(highRisk);
 
-    }
-
-
-    else if(risk === "MEDIUM"){
-
-
-        return "Monitoring required. Increase preparedness.";
-
-    }
-
-
-    else {
-
-
-        return "No immediate risk detected.";
-
-    }
-
-
-}
-
-
-
-console.log(
-generateAlert(currentRisk)
-);
 
 
 
 
 // ===============================
-// Future Integration Points
+// Medium Risk Areas
+// ===============================
+
+
+L.marker([-2.0000, 30.5000])
+
+.bindPopup(
+
+    `
+    <b>🟠 MEDIUM FLOOD RISK</b>
+    <br>
+    Eastern Province
+    <br>
+    Monitoring Required
+    `
+
+)
+
+.addTo(mediumRisk);
+
+
+
+
+
+// ===============================
+// Low Risk Areas
+// ===============================
+
+
+L.marker([-1.8000, 29.2000])
+
+.bindPopup(
+
+    `
+    <b>🟢 LOW RISK</b>
+    <br>
+    Stable Area
+    <br>
+    Normal Conditions
+    `
+
+)
+
+.addTo(lowRisk);
+
+
+
+
+
+
+// ===============================
+// Display Layers
+// ===============================
+
+
+highRisk.addTo(disasterMap);
+
+
+mediumRisk.addTo(disasterMap);
+
+
+lowRisk.addTo(disasterMap);
+
+
+
+
+
+
+// ===============================
+// Layer Control
+// ===============================
+
+
+L.control.layers(
+
+    null,
+
+    {
+
+        "🔴 High Risk Zones":
+        highRisk,
+
+
+        "🟠 Medium Risk Zones":
+        mediumRisk,
+
+
+        "🟢 Low Risk Zones":
+        lowRisk
+
+    }
+
+)
+
+.addTo(disasterMap);
+
+
+
+
+
+
+// ===============================
+// Future Integration
 // ===============================
 //
-// 1. Google Earth Engine API
-// 2. Sentinel Satellite Processing
-// 3. Machine Learning Prediction API
-// 4. Real-time Weather Data
-// 5. Disaster Alert Notification System
+// - Rwanda District GeoJSON
+// - Sentinel-1 Flood Mapping
+// - Sentinel-2 Image Analysis
+// - Google Earth Engine Output
+// - AI Prediction API
+//
+
+
+
+console.log(
+
+"AI Disaster Risk Map Loaded Successfully"
+
+);
