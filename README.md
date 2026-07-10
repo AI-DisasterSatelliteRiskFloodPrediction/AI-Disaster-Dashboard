@@ -1,239 +1,97 @@
-# AI-Disaster-Dashboard
-AI-powered satellite image analysis platform for disaster risk reduction, flood monitoring and climate resilience in Africa.
-# AI-Disaster-Dashboard
 
-## Integrating AI-Driven Satellite Image Analysis into National Disaster Risk Reduction Strategies:
-### A Space-Based Application Framework for Emerging Nations
+# 🌍 AI-Disaster-Dashboard
+## AI-Driven Satellite Image Analysis for Disaster Risk Reduction and Climate Resilience in Africa
 
-**Author:** Ishimwe Serge  
-**Institution:** University of Tourism, Technology, and Business Studies (UTB)  
-**Location:** Kigali, Rwanda  
 
----
+<p align="center">
 
-## 🌍 Project Overview
+<img src="images/logo.png" width="150">
 
-AI-Disaster-Dashboard is an AI-powered satellite image analysis platform designed for disaster risk reduction, flood monitoring, and climate resilience in Africa.
+</p>
 
-The project integrates **Artificial Intelligence (AI), Earth Observation (EO), satellite imagery, machine learning, and geospatial analytics** to transform satellite data into actionable disaster risk information.
 
-The platform aims to support governments, disaster management institutions, and climate resilience stakeholders by enabling early detection, prediction, and visualization of hazards such as floods and landslides.
+## 📌 Project Overview
 
----
+AI-Disaster-Dashboard is an Artificial Intelligence and Earth Observation research prototype developed to support disaster risk reduction through satellite-based monitoring and predictive analytics.
 
-# Abstract
+The project integrates satellite imagery, Artificial Intelligence, Machine Learning, and geospatial technologies to transform Earth observation data into actionable disaster risk information.
 
-The increasing intensity and frequency of climate-induced disasters are placing growing pressure on national disaster risk reduction (DRR) systems, particularly in developing countries with limited predictive capabilities.
+The primary application focuses on flood monitoring and early warning support in Rwanda and other climate-vulnerable regions in Africa.
 
-While space-based Earth observation platforms continuously generate high-resolution optical and radar data suitable for hazard monitoring, their systematic integration into operational national decision-making systems remains limited across emerging space nations.
-
-This project presents an application-oriented framework for embedding AI-driven satellite image analysis into national DRR architectures.
-
-The proposed framework integrates:
-
-- Satellite data acquisition
-- AI-based hazard detection
-- Predictive risk modelling
-- Early warning visualization dashboards
-- Institutional decision-support mechanisms
-
-By positioning AI-enhanced Earth observation as a scalable national application rather than a standalone experiment, this framework demonstrates how emerging space nations can transition from reactive disaster response toward anticipatory, data-driven resilience governance.
 
 ---
 
-# Keywords
+# 🎯 Research Objective
 
-Artificial Intelligence | Earth Observation | Disaster Risk Reduction | Space Applications | Climate Resilience | Satellite Analytics | Emerging Space Nations
+The main objective of this research is to develop an AI-driven framework capable of:
 
----
+- Detecting disaster-related environmental changes from satellite imagery
+- Supporting flood risk assessment
+- Improving climate resilience decision-making
+- Providing near real-time disaster intelligence through interactive dashboards
 
-# 1. Introduction
-
-Climate-related disasters have increased significantly in frequency and socio-economic impact.
-
-Advances in satellite-based Earth observation and Artificial Intelligence provide new opportunities for:
-
-- Flood monitoring
-- Landslide detection
-- Environmental risk assessment
-- Predictive disaster modelling
-
-However, many emerging space nations still face challenges in transforming satellite data into operational disaster management solutions.
-
-This project proposes a framework to bridge the gap between Earth observation capabilities and national disaster governance systems.
 
 ---
 
-# 2. Space-Based Earth Observation for Disaster Applications
-
-Modern satellite systems provide:
-
-- Multispectral imagery
-- Synthetic Aperture Radar (SAR)
-- Climate datasets
-- Geospatial information
-
-AI techniques including:
-
-- Machine Learning
-- Deep Learning
-- Image Classification
-- Predictive Analytics
-
-enable automated hazard identification and risk forecasting.
 
 ---
 
-# 3. Methodology
+# 🔬 Research Applications
 
-The project follows a systems-integration approach consisting of:
+Potential users:
 
-### Data Layer
-Satellite imagery acquisition from Earth observation platforms.
+- Disaster management institutions
+- Climate researchers
+- Government agencies
+- Environmental organizations
+- Humanitarian organizations
 
-### AI Processing Layer
-Machine learning models for:
-
-- Flood detection
-- Land surface analysis
-- Hazard classification
-- Risk prediction
-
-### Visualization Layer
-
-Interactive dashboards displaying:
-
-- Disaster risk levels
-- Satellite analysis results
-- Early warning information
-- Geographic risk maps
-
-### Decision Support Layer
-
-Integration with disaster management institutions for evidence-based decision making.
 
 ---
 
-# 4. Case Study: Rwanda
+# 📚 Research & Conference Activities
 
-Rwanda experiences increasing exposure to:
+Project developed for:
 
-- Flood events
-- Landslides
-- Extreme rainfall variability
+- Scientific conferences
+- Climate research initiatives
+- Early-career researcher programs
+- Innovation and technology competitions
 
-Due to its mountainous landscape.
-
-The country's digital transformation strategy creates opportunities for integrating AI-driven satellite analytics into disaster risk reduction systems.
 
 ---
 
-# 5. Proposed AI Disaster Risk Framework
+# 👨‍🔬 Researcher
 
-The framework contains three main layers:
 
-## Technical Application Layer
+**ISHIMWE Serge**
 
-Includes:
+AI & Earth Observation Researcher
 
-- Satellite data pipelines
-- AI classification models
-- Geospatial processing
+Building AI-driven satellite solutions for disaster risk reduction, climate resilience and early warning systems in Africa.
 
-## Operational Service Layer
-
-Includes:
-
-- Disaster dashboards
-- Risk visualization
-- Early warning systems
-
-## Institutional Integration Layer
-
-Includes:
-
-- Government decision support
-- Disaster management coordination
-- Policy implementation
 
 ---
 
-# 6. Implementation Roadmap
+# 🔗 Links
 
-## Phase I: Prototype Development
+GitHub Repository:
+https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard
 
-- AI model development
-- Satellite data processing
-- Dashboard creation
 
-## Phase II: National Scaling
+Research Dashboard:
+(Add live dashboard link)
 
-- Expansion to multiple regions
-- Real-time monitoring
-- Institutional collaboration
 
-## Phase III: Governance Integration
+LinkedIn:
+(Add LinkedIn profile)
 
-- Long-term operational deployment
-- Policy integration
-- Sustainable disaster intelligence system
 
 ---
 
-# 7. Expected Impact
+# 📜 License
 
-The project contributes to:
+This project is developed for research, innovation and educational purposes.
 
-✅ Improved flood and landslide early warning  
-✅ Climate resilience improvement  
-✅ Data-driven disaster governance  
-✅ Better utilization of satellite technology  
-✅ Strengthening emerging space nations' capabilities  
+# 🛰️ Research Methodology
 
----
-
-# 8. Technology Stack
-
-| Technology | Application |
-|---|---|
-| Artificial Intelligence | Hazard prediction |
-| Machine Learning | Risk classification |
-| Satellite Imagery | Earth observation |
-| GIS | Spatial analysis |
-| Google Earth Engine | Satellite processing |
-| Power BI | Dashboard visualization |
-| GitHub | Open-source development |
-
----
-
-# 9. Future Development
-
-Future improvements include:
-
-- Real-time satellite data integration
-- Mobile disaster alert systems
-- Cloud-based AI processing
-- Automated risk prediction models
-- Regional expansion across Africa
-
----
-
-# References
-
-[1] UNDRR. Sendai Framework for Disaster Risk Reduction 2015–2030.
-
-[2] IPCC. Climate Change Impacts and Adaptation Reports.
-
-[3] Ma et al. Deep Learning for Flood Mapping Using Satellite Imagery, Remote Sensing, 2019.
-
-[4] Zhu et al. Deep Learning in Remote Sensing: A Comprehensive Review, IEEE GRSM, 2017.
-
-[5] World Bank. Disaster Risk Management and Digital Innovation Report.
-
----
-
-## Author
-
-**Ishimwe Serge**  
-AI & Earth Observation Researcher  
-Kigali, Rwanda
