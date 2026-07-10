@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +10,13 @@
         AI Disaster Risk Dashboard | Rwanda
     </title>
 
+
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
 
 </head>
 
@@ -19,40 +26,55 @@
 
 <header>
 
+
     <div class="logo-section">
+
 
         <img src="MY LOG SERGE.png" 
              alt="AI Disaster Logo">
 
+
         <div>
+
 
             <h1>
             AI Disaster Risk Dashboard
             </h1>
+
 
             <p>
             AI-driven satellite image analysis 
             for disaster risk reduction
             </p>
 
+
         </div>
 
+
     </div>
+
 
 
     <div class="status">
 
+
         🛰 Satellite Monitoring Active
 
+
         <br>
+
 
         Last Update:
         <span id="date"></span>
 
+
     </div>
 
 
+
 </header>
+
+
 
 
 
@@ -73,6 +95,7 @@ Areas Monitored
 
 
 
+
 <div class="card high">
 
 <h3>
@@ -87,6 +110,7 @@ High Risk Zones
 
 
 
+
 <div class="card medium">
 
 <h3>
@@ -98,6 +122,7 @@ Medium Risk Zones
 </h2>
 
 </div>
+
 
 
 
@@ -119,7 +144,11 @@ Low Risk Zones
 
 
 
+
+
+
 <section class="main-dashboard">
+
 
 
 <div class="map-box">
@@ -130,42 +159,40 @@ Flood Risk Map
 </h2>
 
 
-<div class="map">
 
-<h3>
-🛰 Satellite + AI Risk Visualization
-</h3>
+<!-- Leaflet Interactive Map -->
 
+<div id="map">
 
-<p>
+</div>
 
-Map integration coming:
-Google Earth Engine + Leaflet
-
-</p>
 
 
 <div class="legend">
+
 
 <span>
 🔴 High Risk
 </span>
 
+
 <span>
 🟠 Medium Risk
 </span>
+
 
 <span>
 🟢 Low Risk
 </span>
 
-</div>
-
 
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -179,16 +206,20 @@ AI Prediction
 </h2>
 
 
+
 <div class="prediction-card">
+
 
 
 <p>
 Location:
 </p>
 
+
 <h3>
 Northern Province, Rwanda
 </h3>
+
 
 
 <p>
@@ -202,9 +233,11 @@ Flood Probability
 
 
 
+
 <p>
 Risk Level:
 </p>
+
 
 <h2 class="danger">
 HIGH
@@ -212,9 +245,11 @@ HIGH
 
 
 
+
 <p>
 AI Model:
 </p>
+
 
 <strong>
 Random Forest + Sentinel-2
@@ -228,13 +263,18 @@ Confidence:
 </p>
 
 
+
 </div>
 
 
+
 </div>
+
+
 
 
 </section>
+
 
 
 
@@ -249,7 +289,9 @@ Climate Indicators
 </h2>
 
 
+
 <div class="indicator">
+
 
 <div>
 
@@ -260,6 +302,7 @@ Climate Indicators
 </h2>
 
 </div>
+
 
 
 <div>
@@ -273,6 +316,7 @@ Climate Indicators
 </div>
 
 
+
 <div>
 
 🌡 Temperature
@@ -282,6 +326,7 @@ Climate Indicators
 </h2>
 
 </div>
+
 
 
 <div>
@@ -295,10 +340,13 @@ High
 </div>
 
 
+
 </div>
 
 
 </section>
+
+
 
 
 
@@ -312,18 +360,25 @@ Emergency Alert System
 </h2>
 
 
+
 <div class="alert-box">
+
 
 ⚠️
 
+
 Flood risk detected.
+
 
 <br>
 
+
 Recommended Action:
+
 
 Activate community early warning
 and disaster response procedures.
+
 
 
 </div>
@@ -334,7 +389,11 @@ and disaster response procedures.
 
 
 
+
+
+
 <footer>
+
 
 <p>
 
@@ -345,13 +404,33 @@ AI Disaster Dashboard © 2026
 Building climate resilience using Artificial Intelligence
 and Earth Observation
 
+
 </p>
+
 
 </footer>
 
 
 
+
+
+
+<!-- Leaflet JavaScript -->
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+
+<!-- Map Function -->
+
+<script src="src/map.js"></script>
+
+
+
+<!-- Dashboard Function -->
+
 <script src="src/dashboard.js"></script>
+
 
 
 </body>
