@@ -1,192 +1,315 @@
-/* 
+/*
 AI Disaster Risk Dashboard
-Professional Dashboard Styling
+Professional Research Portfolio Styling
 */
 
 
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #f4f7fb;
-    color: #1f2937;
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
-/* HEADER */
+body{
 
-header {
-
-    background: #0b3d91;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-
-.logo-section {
-
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-}
-
-
-.logo-section img {
-
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    object-fit: cover;
-
-}
-
-
-.logo-section h1 {
-
-    margin: 0;
-    font-size: 28px;
-
-}
-
-
-.logo-section p {
-
-    margin-top: 8px;
-    font-size: 15px;
-
-}
-
-
-.status {
-
-    text-align: right;
-    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
 
 }
 
 
 
-/* STATISTICS CARDS */
+/* =====================
+HEADER
+===================== */
 
 
-.cards {
+header{
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 20px;
-    padding: 30px;
-
-}
-
-
-
-.card {
-
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background:#0b3d91;
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
 
 }
 
 
-
-.card h2 {
-
-    font-size: 35px;
-    margin: 10px 0;
-
-}
-
-
-
-.high {
-
-    border-left: 8px solid red;
-
-}
-
-
-
-.medium {
-
-    border-left: 8px solid orange;
-
-}
-
-
-
-.low {
-
-    border-left: 8px solid green;
-
-}
-
-
-
-/* MAIN DASHBOARD */
-
-
-.main-dashboard {
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 25px;
-    padding: 30px;
-
-}
-
-
-.map-box,
-.prediction,
-.climate,
-.alert {
-
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-
-}
-
-
-
-/* MAP SECTION */
-
-
-.map {
-
-    height: 400px;
-    background: #dce8f7;
-    border-radius: 12px;
+.logo-section{
 
     display:flex;
-    flex-direction:column;
-    justify-content:center;
     align-items:center;
+    gap:20px;
 
+}
+
+
+.logo-section img{
+
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    object-fit:cover;
+
+}
+
+
+.logo-section h1{
+
+    font-size:28px;
+    margin-bottom:8px;
+
+}
+
+
+.logo-section p{
+
+    font-size:15px;
+
+}
+
+
+
+/* NAVIGATION */
+
+
+nav{
+
+    display:flex;
+    gap:20px;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+
+nav a:hover{
+
+    color:#ffd166;
+
+}
+
+
+
+/* STATUS */
+
+
+.status{
+
+    text-align:right;
+
+}
+
+
+
+
+/* =====================
+HOME HERO
+===================== */
+
+
+.hero{
+
+    background:white;
+    padding:70px 10%;
+    text-align:center;
+
+}
+
+
+.hero h1{
+
+    color:#0b3d91;
+    font-size:38px;
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    font-size:18px;
+    line-height:1.7;
+
+}
+
+
+
+
+
+/* =====================
+RESEARCH
+===================== */
+
+
+.research{
+
+    padding:50px 10%;
     text-align:center;
 
 }
 
 
 
-.legend {
+.research p{
 
+    margin-top:15px;
+    font-size:18px;
+
+}
+
+
+
+.workflow{
+
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+}
+
+
+
+.workflow div{
+
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* =====================
+CARDS
+===================== */
+
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:30px;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+.card h2{
+
+    font-size:40px;
+    margin-top:10px;
+
+}
+
+
+
+.high{
+
+    border-left:8px solid red;
+
+}
+
+
+.medium{
+
+    border-left:8px solid orange;
+
+}
+
+
+.low{
+
+    border-left:8px solid green;
+
+}
+
+
+
+
+
+/* =====================
+DASHBOARD
+===================== */
+
+
+.main-dashboard{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    padding:30px;
+
+}
+
+
+
+.map-box,
+.prediction{
+
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+/* IMPORTANT FOR LEAFLET MAP */
+
+
+#map{
+
+    height:450px;
+    width:100%;
+    border-radius:12px;
     margin-top:20px;
 
 }
 
 
 
-.legend span {
+.legend{
+
+    margin-top:20px;
+    text-align:center;
+
+}
+
+
+.legend span{
 
     margin:10px;
     font-weight:bold;
@@ -195,29 +318,33 @@ header {
 
 
 
-/* AI PREDICTION */
 
 
-.prediction-card {
+/* =====================
+AI PREDICTION
+===================== */
+
+
+.prediction-card{
 
     background:#eef3ff;
     padding:20px;
     border-radius:12px;
+    text-align:center;
 
 }
 
 
 
-.prediction-card h1 {
+.prediction-card h1{
 
-    font-size:45px;
-    margin:10px 0;
+    font-size:55px;
+    color:#d00000;
 
 }
 
 
-
-.danger {
+.danger{
 
     color:red;
 
@@ -225,28 +352,36 @@ header {
 
 
 
-/* CLIMATE INDICATORS */
 
 
-.climate {
+/* =====================
+CLIMATE
+===================== */
 
+
+.climate{
+
+    background:white;
     margin:30px;
+    padding:30px;
+    border-radius:15px;
 
 }
 
 
 
-.indicator {
+.indicator{
 
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
+    margin-top:20px;
 
 }
 
 
 
-.indicator div {
+.indicator div{
 
     background:#f8fafc;
     padding:20px;
@@ -257,50 +392,94 @@ header {
 
 
 
-/* ALERT SYSTEM */
 
 
-.alert {
+/* =====================
+ALERT
+===================== */
+
+
+.alert{
 
     margin:30px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
 
 }
 
 
 
-.alert-box {
+.alert-box{
 
     background:#ffe6e6;
     border-left:10px solid red;
     padding:25px;
-    font-size:18px;
+    margin-top:20px;
     border-radius:10px;
 
 }
 
 
 
-/* FOOTER */
 
 
-footer {
+/* =====================
+IMPACT CONTACT
+===================== */
 
-    background:#0b3d91;
-    color:white;
-    text-align:center;
-    padding:20px;
+
+.impact,
+.contact{
+
+    background:white;
+    margin:30px;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
 
 }
 
 
 
-/* MOBILE RESPONSIVE */
+.impact li{
+
+    margin:15px;
+    font-size:18px;
+
+}
+
+
+
+
+
+/* =====================
+FOOTER
+===================== */
+
+
+footer{
+
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:25px;
+
+}
+
+
+
+
+
+/* =====================
+MOBILE
+===================== */
 
 
 @media(max-width:900px){
 
 
-header {
+header{
 
     flex-direction:column;
     text-align:center;
@@ -308,7 +487,16 @@ header {
 }
 
 
-.status {
+nav{
+
+    margin-top:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+
+.status{
 
     text-align:center;
     margin-top:15px;
@@ -316,10 +504,23 @@ header {
 }
 
 
-
-.main-dashboard {
+.main-dashboard{
 
     grid-template-columns:1fr;
+
+}
+
+
+.hero h1{
+
+    font-size:28px;
+
+}
+
+
+.workflow{
+
+    flex-direction:column;
 
 }
 
