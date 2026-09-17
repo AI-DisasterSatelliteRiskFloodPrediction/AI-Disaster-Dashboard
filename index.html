@@ -34,18 +34,65 @@
 
         </div>
 
-        <nav>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav">
+
             <a href="#home">Home</a>
+
             <a href="#research">Research</a>
+
             <a href="#dashboard">Dashboard</a>
+
+
+            <!-- EARTHCODE DROPDOWN -->
+
+            <div class="nav-dropdown">
+
+                <a href="#" class="dropdown-toggle">
+                    🌍 EarthCODE ▾
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a
+                        href="https://earthcode.esa.int/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        🌍 Open EarthCODE
+                    </a>
+
+                    <a
+                        href="https://code.earthengine.google.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💻 Earth Engine JavaScript
+                    </a>
+
+                </div>
+
+            </div>
+
+
             <a href="#impact">Impact</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
 
+
         <div class="status">
+
             🛰 Satellite Monitoring Active
+
             <br>
-            Last Update: <span id="date"></span>
+
+            Last Update:
+            <span id="date"></span>
+
         </div>
 
     </header>
@@ -88,6 +135,7 @@
             AI-Driven Satellite Flood Risk Monitoring for Rwanda
         </h1>
 
+
         <p>
             Transforming satellite imagery into real-time flood risk maps
             using Artificial Intelligence and Google Earth Engine to support
@@ -95,15 +143,19 @@
             decision making.
         </p>
 
+
         <div class="hero-buttons">
 
             <a href="#dashboard" class="btn">
                 View Dashboard
             </a>
 
-            <a href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
-               class="btn-secondary"
-               target="_blank">
+            <a
+                href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
+                class="btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 GitHub
             </a>
 
@@ -128,33 +180,63 @@
         <div class="workflow">
 
             <div class="workflow-item">
+
                 <span>🛰</span>
+
                 <strong>Satellite Data</strong>
-                <small>Sentinel-1 / Sentinel-2</small>
+
+                <small>
+                    Sentinel-1 / Sentinel-2
+                </small>
+
             </div>
+
 
             <div class="arrow">→</div>
 
+
             <div class="workflow-item">
+
                 <span>🌍</span>
+
                 <strong>Google Earth Engine</strong>
-                <small>Earth Observation Processing</small>
+
+                <small>
+                    Earth Observation Processing
+                </small>
+
             </div>
+
 
             <div class="arrow">→</div>
 
+
             <div class="workflow-item">
+
                 <span>🤖</span>
+
                 <strong>AI / Machine Learning</strong>
-                <small>Risk Detection & Prediction</small>
+
+                <small>
+                    Risk Detection & Prediction
+                </small>
+
             </div>
+
 
             <div class="arrow">→</div>
 
+
             <div class="workflow-item">
+
                 <span>🗺</span>
+
                 <strong>Risk Map</strong>
-                <small>Flood Risk Visualization</small>
+
+                <small>
+                    Flood Risk Visualization
+                </small>
+
             </div>
 
         </div>
@@ -168,35 +250,52 @@
 
         <h2>Flood Risk Dashboard</h2>
 
+
         <!-- STATISTICS CARDS -->
 
         <section class="cards">
 
             <div class="card">
+
                 <h3>Areas Monitored</h3>
+
                 <h2>245</h2>
+
                 <p>Monitoring Areas</p>
+
             </div>
 
 
             <div class="card high">
+
                 <h3>High Risk Zones</h3>
+
                 <h2>32</h2>
+
                 <p>Priority Areas</p>
+
             </div>
 
 
             <div class="card medium">
+
                 <h3>Medium Risk Zones</h3>
+
                 <h2>76</h2>
+
                 <p>Areas Requiring Attention</p>
+
             </div>
 
 
             <div class="card low">
+
                 <h3>Low Risk Zones</h3>
+
                 <h2>137</h2>
+
                 <p>Lower Risk Areas</p>
+
             </div>
 
         </section>
@@ -211,6 +310,7 @@
                 <h2>Flood Risk Map</h2>
 
                 <div id="map"></div>
+
 
                 <div class="legend">
 
@@ -235,6 +335,7 @@
 
                 <h2>AI Prediction</h2>
 
+
                 <div class="prediction-card">
 
                     <p>Location:</p>
@@ -244,19 +345,27 @@
                     </h3>
 
 
-                    <p>Flood Probability</p>
+                    <p>
+                        Flood Probability
+                    </p>
 
-                    <h1>78%</h1>
+                    <h1>
+                        78%
+                    </h1>
 
 
-                    <p>Risk Level:</p>
+                    <p>
+                        Risk Level:
+                    </p>
 
                     <h2 class="danger">
                         HIGH
                     </h2>
 
 
-                    <p>AI Model:</p>
+                    <p>
+                        AI Model:
+                    </p>
 
                     <strong>
                         Random Forest + Sentinel-2
@@ -264,7 +373,8 @@
 
 
                     <p>
-                        Confidence: <strong>89%</strong>
+                        Confidence:
+                        <strong>89%</strong>
                     </p>
 
                 </div>
@@ -274,39 +384,74 @@
         </section>
 
 
-        <!-- CLIMATE INDICATORS -->
+        <!-- ================= CLIMATE INDICATORS ================= -->
 
         <section class="climate">
 
-            <h2>Climate Indicators</h2>
+            <h2>
+                Climate Indicators
+            </h2>
+
 
             <div class="indicator">
 
                 <div>
+
                     🌧
-                    <h3>Rainfall</h3>
-                    <h2>245 mm</h2>
+
+                    <h3>
+                        Rainfall
+                    </h3>
+
+                    <h2>
+                        245 mm
+                    </h2>
+
                 </div>
 
 
                 <div>
+
                     💧
-                    <h3>Soil Moisture</h3>
-                    <h2>72%</h2>
+
+                    <h3>
+                        Soil Moisture
+                    </h3>
+
+                    <h2>
+                        72%
+                    </h2>
+
                 </div>
 
 
                 <div>
+
                     🌡
-                    <h3>Temperature</h3>
-                    <h2>24°C</h2>
+
+                    <h3>
+                        Temperature
+                    </h3>
+
+                    <h2>
+                        24°C
+                    </h2>
+
                 </div>
 
 
                 <div>
+
                     🏞
-                    <h3>River Level</h3>
-                    <h2>High</h2>
+
+                    <h3>
+                        River Level
+                    </h3>
+
+                    <h2>
+                        High
+                    </h2>
+
                 </div>
 
             </div>
@@ -314,15 +459,21 @@
         </section>
 
 
-        <!-- EMERGENCY ALERT -->
+        <!-- ================= EMERGENCY ALERT ================= -->
 
         <section class="alert">
 
-            <h2>Emergency Alert System</h2>
+            <h2>
+                Emergency Alert System
+            </h2>
+
 
             <div class="alert-box">
 
-                ⚠️ <strong>Flood Risk Detected</strong>
+                ⚠️
+                <strong>
+                    Flood Risk Detected
+                </strong>
 
                 <br><br>
 
@@ -344,7 +495,10 @@
 
     <section id="impact" class="impact">
 
-        <h2>Research Impact</h2>
+        <h2>
+            Research Impact
+        </h2>
+
 
         <ul>
 
@@ -373,26 +527,45 @@
 
     <section id="contact" class="contact">
 
-        <h2>Contact & Project Information</h2>
+        <h2>
+            Contact & Project Information
+        </h2>
+
 
         <p>
-            <strong>AI Disaster Risk Dashboard Project</strong>
+            <strong>
+                AI Disaster Risk Dashboard Project
+            </strong>
         </p>
 
+
         <p>
+
             GitHub Repository:
+
             <br>
 
-            <a href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
-               target="_blank">
+            <a
+                href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 AI-Disaster-Dashboard
             </a>
+
         </p>
 
+
         <p>
+
             Researcher:
+
             <br>
-            <strong>ISHIMWE Serge</strong>
+
+            <strong>
+                ISHIMWE Serge
+            </strong>
+
         </p>
 
     </section>
@@ -403,10 +576,14 @@
     <footer>
 
         <p>
+
             AI Disaster Dashboard © 2026
+
             <br>
+
             Building climate resilience using Artificial Intelligence
             and Earth Observation
+
         </p>
 
     </footer>
@@ -425,11 +602,14 @@
 
     <script>
 
-        const dateElement = document.getElementById("date");
+        const dateElement =
+            document.getElementById("date");
 
-        const today = new Date();
+        const today =
+            new Date();
 
-        dateElement.textContent = today.toLocaleString();
+        dateElement.textContent =
+            today.toLocaleString();
 
     </script>
 
