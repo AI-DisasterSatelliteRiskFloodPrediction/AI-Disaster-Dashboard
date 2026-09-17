@@ -575,3 +575,215 @@ nav{
     border:2px solid #0b4f8a;
     color:#0b4f8a;
 }
+/* =====================================================
+   EARTHCODE DROPDOWN MENU
+   ===================================================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav > a,
+.dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-nav > a:hover,
+.dropdown-toggle:hover {
+    color: #ffd166;
+}
+
+
+/* Dropdown container */
+
+.nav-dropdown {
+    position: relative;
+}
+
+
+/* Dropdown menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    min-width: 250px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.18);
+
+    padding: 10px;
+
+    z-index: 9999;
+}
+
+
+/* Dropdown links */
+
+.dropdown-menu a {
+    display: block;
+
+    color: #0b3d91;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 13px 16px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+/* Hover effect */
+
+.dropdown-menu a:hover {
+    background: #eef3ff;
+
+    color: #0b3d91;
+}
+
+
+/* Show dropdown */
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* =====================================================
+   EARTHCODE BUTTONS
+   ===================================================== */
+
+.earthcode-card {
+    margin: 30px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    text-align: center;
+}
+
+.earthcode-card h2 {
+    color: #0b3d91;
+
+    margin-bottom: 10px;
+}
+
+.earthcode-card p {
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+}
+
+
+.earthcode-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.earthcode-button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: #0b3d91;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.earthcode-button:hover {
+    background: #082f70;
+
+    transform: translateY(-2px);
+}
+
+
+.earthengine-button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: #198754;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.earthengine-button:hover {
+    background: #146c43;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        margin-top: 15px;
+    }
+
+    .dropdown-menu {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
