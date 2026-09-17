@@ -1,600 +1,439 @@
-<section class="hero">
-    ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│ 🛰 Satellite     │ │ 🤖 AI Analysis  │ │ 🌍 Coverage     │ │ ⚡ Monitoring    │
-│ Sentinel-1/2    │ │ Flood Detection │ │ Rwanda          │ │ Near Real-Time  │
-└─────────────────┘ └─────────────────┘ └─────────────────┘ └─────────────────┘
-
-    <h1>AI-Driven Satellite Flood Risk Monitoring for Rwanda</h1>
-
-    <p>
-        Transforming satellite imagery into real-time flood risk maps using
-        Artificial Intelligence and Google Earth Engine to support disaster
-        preparedness, early warning, and evidence-based decision making.
-    </p>
-
-    <div class="hero-buttons">
-        <a href="dashboard.html" class="btn">View Dashboard</a>
-        <a href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard" class="btn-secondary">GitHub</a>
-    </div>
-
-</section>
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Disaster Risk Dashboard | Rwanda</title>
 
-<title>
-AI Disaster Risk Dashboard | Rwanda
-</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
-
 
 <body>
 
+    <!-- ================= HEADER ================= -->
 
-<header>
+    <header>
 
+        <div class="logo-section">
 
-<div class="logo-section">
+            <img src="MY LOG SERGE.png" alt="AI Disaster Logo">
 
+            <div>
+                <h1>AI Disaster Risk Dashboard</h1>
 
-<img src="MY LOG SERGE.png" alt="AI Disaster Logo">
+                <p>
+                    AI-driven satellite image analysis for disaster risk reduction
+                </p>
+            </div>
 
+        </div>
 
-<div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#research">Research</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#impact">Impact</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-<h1>
-AI Disaster Risk Dashboard
-</h1>
+        <div class="status">
+            🛰 Satellite Monitoring Active
+            <br>
+            Last Update: <span id="date"></span>
+        </div>
 
-<p>
-AI-driven satellite image analysis for disaster risk reduction
-</p>
+    </header>
 
-</div>
 
+    <!-- ================= HERO ================= -->
 
-</div>
+    <section id="home" class="hero">
 
+        <div class="hero-features">
 
+            <div class="feature-box">
+                <span>🛰</span>
+                <strong>Satellite</strong>
+                <small>Sentinel-1 / Sentinel-2</small>
+            </div>
 
-<nav>
+            <div class="feature-box">
+                <span>🤖</span>
+                <strong>AI Analysis</strong>
+                <small>Flood Detection</small>
+            </div>
 
-<a href="#home">Home</a>
+            <div class="feature-box">
+                <span>🌍</span>
+                <strong>Coverage</strong>
+                <small>Rwanda</small>
+            </div>
 
-<a href="#research">Research</a>
+            <div class="feature-box">
+                <span>⚡</span>
+                <strong>Monitoring</strong>
+                <small>Near Real-Time</small>
+            </div>
 
-<a href="#dashboard">Dashboard</a>
+        </div>
 
-<a href="#impact">Impact</a>
 
-<a href="#contact">Contact</a>
+        <h1>
+            AI-Driven Satellite Flood Risk Monitoring for Rwanda
+        </h1>
 
-</nav>
+        <p>
+            Transforming satellite imagery into real-time flood risk maps
+            using Artificial Intelligence and Google Earth Engine to support
+            disaster preparedness, early warning, and evidence-based
+            decision making.
+        </p>
 
+        <div class="hero-buttons">
 
+            <a href="#dashboard" class="btn">
+                View Dashboard
+            </a>
 
-<div class="status">
+            <a href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
+               class="btn-secondary"
+               target="_blank">
+                GitHub
+            </a>
 
-🛰 Satellite Monitoring Active
+        </div>
 
-<br>
+    </section>
 
-Last Update:
-<span id="date"></span>
 
-</div>
+    <!-- ================= RESEARCH ================= -->
 
+    <section id="research" class="research">
 
-</header>
+        <h2>Research Overview</h2>
 
+        <p>
+            The system combines Sentinel-1/Sentinel-2 satellite imagery,
+            Google Earth Engine processing and Artificial Intelligence
+            models to detect and predict disaster risks in Rwanda.
+        </p>
 
 
+        <div class="workflow">
 
+            <div class="workflow-item">
+                <span>🛰</span>
+                <strong>Satellite Data</strong>
+                <small>Sentinel-1 / Sentinel-2</small>
+            </div>
 
-<!-- HOME SECTION -->
+            <div class="arrow">→</div>
 
-<section id="home" class="hero">
+            <div class="workflow-item">
+                <span>🌍</span>
+                <strong>Google Earth Engine</strong>
+                <small>Earth Observation Processing</small>
+            </div>
 
+            <div class="arrow">→</div>
 
-<h1>
-Integrating AI-Driven Satellite Image Analysis 
-into National Disaster Risk Reduction Strategies
-</h1>
+            <div class="workflow-item">
+                <span>🤖</span>
+                <strong>AI / Machine Learning</strong>
+                <small>Risk Detection & Prediction</small>
+            </div>
 
+            <div class="arrow">→</div>
 
-<p>
+            <div class="workflow-item">
+                <span>🗺</span>
+                <strong>Risk Map</strong>
+                <small>Flood Risk Visualization</small>
+            </div>
 
-This project uses Artificial Intelligence,
-Machine Learning and Earth Observation data
-to improve flood and landslide early warning
-systems in Rwanda.
+        </div>
 
-</p>
+    </section>
 
 
-</section>
+    <!-- ================= DASHBOARD ================= -->
 
+    <section id="dashboard" class="dashboard-section">
 
+        <h2>Flood Risk Dashboard</h2>
 
+        <!-- STATISTICS CARDS -->
 
+        <section class="cards">
 
-<!-- RESEARCH SECTION -->
+            <div class="card">
+                <h3>Areas Monitored</h3>
+                <h2>245</h2>
+                <p>Monitoring Areas</p>
+            </div>
 
 
-<section id="research" class="research">
+            <div class="card high">
+                <h3>High Risk Zones</h3>
+                <h2>32</h2>
+                <p>Priority Areas</p>
+            </div>
 
 
-<h2>
-Research Overview
-</h2>
+            <div class="card medium">
+                <h3>Medium Risk Zones</h3>
+                <h2>76</h2>
+                <p>Areas Requiring Attention</p>
+            </div>
 
 
-<p>
+            <div class="card low">
+                <h3>Low Risk Zones</h3>
+                <h2>137</h2>
+                <p>Lower Risk Areas</p>
+            </div>
 
-The system combines Sentinel-1/Sentinel-2 satellite imagery,
-Google Earth Engine processing and AI models to detect
-and predict disaster risks.
+        </section>
 
-</p>
 
+        <!-- MAP + AI PREDICTION -->
 
+        <section class="main-dashboard">
 
-<div class="workflow">
+            <div class="map-box">
 
+                <h2>Flood Risk Map</h2>
 
-<div>
-🛰
-<br>
-Satellite Data
-</div>
+                <div id="map"></div>
 
+                <div class="legend">
 
-<div>
-⬇
-</div>
+                    <span>
+                        🔴 High Risk
+                    </span>
 
+                    <span>
+                        🟠 Medium Risk
+                    </span>
 
-<div>
-🌍
-<br>
-Google Earth Engine
-</div>
+                    <span>
+                        🟢 Low Risk
+                    </span>
 
+                </div>
 
-<div>
-⬇
-</div>
+            </div>
 
 
-<div>
-🤖
-<br>
-AI / Machine Learning
-</div>
+            <div class="prediction">
 
+                <h2>AI Prediction</h2>
 
-<div>
-⬇
-</div>
+                <div class="prediction-card">
 
+                    <p>Location:</p>
 
-<div>
-🗺
-<br>
-Risk Map
-</div>
+                    <h3>
+                        Northern Province, Rwanda
+                    </h3>
 
 
-</div>
+                    <p>Flood Probability</p>
 
+                    <h1>78%</h1>
 
 
-</section>
+                    <p>Risk Level:</p>
 
+                    <h2 class="danger">
+                        HIGH
+                    </h2>
 
 
+                    <p>AI Model:</p>
 
+                    <strong>
+                        Random Forest + Sentinel-2
+                    </strong>
 
 
-<!-- DASHBOARD SECTION -->
+                    <p>
+                        Confidence: <strong>89%</strong>
+                    </p>
 
+                </div>
 
-<section id="dashboard">
+            </div>
 
+        </section>
 
 
-<section class="cards">
+        <!-- CLIMATE INDICATORS -->
 
+        <section class="climate">
 
-<div class="card">
+            <h2>Climate Indicators</h2>
 
-<h3>
-Areas Monitored
-</h3>
+            <div class="indicator">
 
-<h2>
-245
-</h2>
+                <div>
+                    🌧
+                    <h3>Rainfall</h3>
+                    <h2>245 mm</h2>
+                </div>
 
-</div>
 
+                <div>
+                    💧
+                    <h3>Soil Moisture</h3>
+                    <h2>72%</h2>
+                </div>
 
 
-<div class="card high">
+                <div>
+                    🌡
+                    <h3>Temperature</h3>
+                    <h2>24°C</h2>
+                </div>
 
-<h3>
-High Risk Zones
-</h3>
 
-<h2>
-32
-</h2>
+                <div>
+                    🏞
+                    <h3>River Level</h3>
+                    <h2>High</h2>
+                </div>
 
-</div>
+            </div>
 
+        </section>
 
 
-<div class="card medium">
+        <!-- EMERGENCY ALERT -->
 
-<h3>
-Medium Risk Zones
-</h3>
+        <section class="alert">
 
-<h2>
-76
-</h2>
+            <h2>Emergency Alert System</h2>
 
-</div>
+            <div class="alert-box">
 
+                ⚠️ <strong>Flood Risk Detected</strong>
 
+                <br><br>
 
-<div class="card low">
+                Recommended Action:
 
-<h3>
-Low Risk Zones
-</h3>
+                <br>
 
-<h2>
-137
-</h2>
+                Activate community early warning
+                and disaster response procedures.
 
-</div>
+            </div>
 
+        </section>
 
-</section>
+    </section>
 
 
+    <!-- ================= IMPACT ================= -->
 
+    <section id="impact" class="impact">
 
+        <h2>Research Impact</h2>
 
+        <ul>
 
-<section class="main-dashboard">
+            <li>
+                Improved flood early warning systems
+            </li>
 
+            <li>
+                Better disaster preparedness
+            </li>
 
-<div class="map-box">
+            <li>
+                Climate resilience using AI and satellite technology
+            </li>
 
+            <li>
+                Supports Sustainable Development Goals (SDGs)
+            </li>
 
-<h2>
-Flood Risk Map
-</h2>
+        </ul>
 
+    </section>
 
-<div id="map"></div>
 
+    <!-- ================= CONTACT ================= -->
 
+    <section id="contact" class="contact">
 
-<div class="legend">
+        <h2>Contact & Project Information</h2>
 
-<span>
-🔴 High Risk
-</span>
+        <p>
+            <strong>AI Disaster Risk Dashboard Project</strong>
+        </p>
 
+        <p>
+            GitHub Repository:
+            <br>
 
-<span>
-🟠 Medium Risk
-</span>
+            <a href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
+               target="_blank">
+                AI-Disaster-Dashboard
+            </a>
+        </p>
 
+        <p>
+            Researcher:
+            <br>
+            <strong>ISHIMWE Serge</strong>
+        </p>
 
-<span>
-🟢 Low Risk
-</span>
+    </section>
 
 
-</div>
+    <!-- ================= FOOTER ================= -->
 
+    <footer>
 
+        <p>
+            AI Disaster Dashboard © 2026
+            <br>
+            Building climate resilience using Artificial Intelligence
+            and Earth Observation
+        </p>
 
-</div>
+    </footer>
 
 
+    <!-- ================= JAVASCRIPT ================= -->
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+    <script src="src/map.js"></script>
 
+    <script src="src/dashboard.js"></script>
 
 
-<div class="prediction">
+    <!-- LAST UPDATE DATE -->
 
+    <script>
 
-<h2>
-AI Prediction
-</h2>
+        const dateElement = document.getElementById("date");
 
+        const today = new Date();
 
-<div class="prediction-card">
+        dateElement.textContent = today.toLocaleString();
 
-
-<p>
-Location:
-</p>
-
-
-<h3>
-Northern Province, Rwanda
-</h3>
-
-
-<p>
-Flood Probability
-</p>
-
-
-<h1>
-78%
-</h1>
-
-
-<p>
-Risk Level:
-</p>
-
-
-<h2 class="danger">
-HIGH
-</h2>
-
-
-<p>
-AI Model:
-</p>
-
-
-<strong>
-Random Forest + Sentinel-2
-</strong>
-
-
-<p>
-Confidence:
-89%
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-<section class="climate">
-
-
-<h2>
-Climate Indicators
-</h2>
-
-
-
-<div class="indicator">
-
-
-<div>
-🌧 Rainfall
-<h2>
-245 mm
-</h2>
-</div>
-
-
-<div>
-💧 Soil Moisture
-<h2>
-72%
-</h2>
-</div>
-
-
-<div>
-🌡 Temperature
-<h2>
-24°C
-</h2>
-</div>
-
-
-<div>
-🏞 River Level
-<h2>
-High
-</h2>
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section class="alert">
-
-
-<h2>
-Emergency Alert System
-</h2>
-
-
-<div class="alert-box">
-
-
-⚠️ Flood risk detected.
-
-<br><br>
-
-Recommended Action:
-
-<br>
-
-Activate community early warning
-and disaster response procedures.
-
-
-</div>
-
-
-</section>
-
-
-
-</section>
-
-
-
-
-
-
-
-<!-- IMPACT SECTION -->
-
-
-<section id="impact" class="impact">
-
-
-<h2>
-Research Impact
-</h2>
-
-
-<ul>
-
-<li>
-Improved flood early warning systems
-</li>
-
-
-<li>
-Better disaster preparedness
-</li>
-
-
-<li>
-Climate resilience using AI and satellite technology
-</li>
-
-
-<li>
-Supports Sustainable Development Goals (SDGs)
-</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- CONTACT SECTION -->
-
-
-<section id="contact" class="contact">
-
-
-<h2>
-Contact & Project Information
-</h2>
-
-
-<p>
-AI Disaster Risk Dashboard Project
-</p>
-
-
-<p>
-GitHub Repository:
-AI-Disaster-Dashboard
-</p>
-
-
-<p>
-Researcher:
-ISHIMWE Serge
-</p>
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-
-<p>
-
-AI Disaster Dashboard © 2026
-
-<br>
-
-Building climate resilience using Artificial Intelligence
-and Earth Observation
-
-</p>
-
-
-</footer>
-
-
-
-
-
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-
-<script src="src/map.js"></script>
-
-
-<script src="src/dashboard.js"></script>
-
+    </script>
 
 </body>
 
 </html>
+```
