@@ -5,57 +5,151 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ISHIMWE Serge | AI Disaster Risk Dashboard Rwanda</title>
+  <title>ISHIMWE Serge | Satellite Data, GIS & AI for Climate Resilience</title>
 
-  <meta name="description" content="Official portfolio of ISHIMWE Serge featuring AI, satellite remote sensing, Google Earth Engine, geospatial analysis, and flood risk monitoring research in Rwanda.">
+  <meta name="description" content="Explore the portfolio of ISHIMWE Serge, a Rwandan researcher and professional focused on satellite data, GIS, space applications, AI-driven disaster risk reduction, and climate resilience.">
+
   <meta name="author" content="ISHIMWE Serge">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#071a2b">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#071827">
 
   <link rel="canonical" href="https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ISHIMWE Serge | AI Disaster Risk Dashboard">
-  <meta property="og:description" content="Explore ISHIMWE Serge's project on AI, satellite imagery, geospatial analysis, and flood risk monitoring in Rwanda.">
+  <meta property="og:title" content="ISHIMWE Serge | AI Disaster Dashboard">
+  <meta property="og:description" content="A portfolio exploring satellite image analysis, GIS, AI-assisted disaster risk reduction, and climate resilience in Rwanda.">
   <meta property="og:url" content="https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/">
+  <meta property="og:site_name" content="ISHIMWE Serge Portfolio">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ISHIMWE Serge | Satellite Data, GIS & AI">
+  <meta name="twitter:description" content="Explore research and portfolio work in satellite data, GIS, disaster risk reduction, and climate resilience.">
 
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Structured data helps search engines understand this page.
+       Keep all professional details accurate and up to date. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/#person",
+        "name": "ISHIMWE Serge",
+        "url": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/",
+        "sameAs": [
+          "https://rw.linkedin.com/in/ishimwe-serge-2b64b633a"
+        ],
+        "jobTitle": "Researcher and Geospatial Professional",
+        "knowsAbout": [
+          "Satellite Remote Sensing",
+          "Geographic Information Systems",
+          "Google Earth Engine",
+          "Artificial Intelligence",
+          "Climate Resilience",
+          "Disaster Risk Reduction",
+          "Flood Susceptibility Mapping",
+          "Space Applications"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kigali",
+          "addressCountry": "RW"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/#website",
+        "url": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/",
+        "name": "ISHIMWE Serge | AI Disaster Dashboard",
+        "description": "Professional portfolio focused on satellite data, GIS, AI-assisted disaster risk reduction, and climate resilience.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/#person"
+        }
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/#project",
+        "name": "Integrating AI-Driven Satellite Image Analysis into National Disaster Risk Reduction Strategies",
+        "url": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/",
+        "author": {
+          "@id": "https://ai-disastersatelliteriskfloodprediction.github.io/AI-Disaster-Dashboard/#person"
+        },
+        "about": [
+          "Satellite image analysis",
+          "Artificial intelligence",
+          "Climate resilience",
+          "Flood risk reduction",
+          "Geospatial analysis"
+        ],
+        "description": "A portfolio project exploring how satellite data, geospatial analysis, and AI-assisted workflows could support disaster risk reduction and climate resilience."
+      }
+    ]
+  }
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  >
 
   <style>
     :root {
-      --bg: #071a2b;
-      --panel: #10263a;
-      --panel-light: #16334b;
-      --text: #edf5fc;
-      --muted: #a9bdcf;
-      --accent: #43d9bd;
-      --blue: #69aaff;
+      --bg: #071827;
+      --panel: #10283a;
+      --panel-light: #153247;
+      --text: #eef7fb;
+      --muted: #b7cbd8;
+      --accent: #45dfb0;
+      --blue: #75c9ff;
       --border: rgba(255,255,255,.12);
+      --max-width: 1120px;
     }
 
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
       color: var(--text);
+      background:
+        radial-gradient(ellipse at top right, #153b4c 0, transparent 42%),
+        var(--bg);
       line-height: 1.7;
     }
 
-    a { color: var(--accent); }
-    a:hover { color: #fff; }
+    a {
+      color: var(--accent);
+      text-underline-offset: 4px;
+    }
 
-    .container { width: min(1120px, 92%); margin: auto; }
+    a:hover {
+      color: #b2ffe6;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin-inline: auto;
+    }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(7,26,43,.96);
+      background: rgba(7, 24, 39, .95);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px);
     }
@@ -67,90 +161,127 @@
       align-items: center;
       gap: 18px;
       flex-wrap: wrap;
-      padding: 12px 0;
+      padding-block: 12px;
     }
 
     .brand {
       color: var(--text);
-      text-decoration: none;
       font-weight: 800;
-      font-size: 1.08rem;
+      font-size: 1.12rem;
+      text-decoration: none;
     }
 
-    .brand span { color: var(--accent); }
+    .brand span {
+      color: var(--accent);
+    }
 
-    nav { display: flex; gap: 15px; flex-wrap: wrap; }
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
     nav a {
       color: var(--muted);
-      font-size: .91rem;
       text-decoration: none;
+      font-size: .92rem;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      padding-block: 76px;
+      scroll-margin-top: 90px;
+    }
 
     .hero {
-      padding: 88px 0 76px;
-      background:
-        radial-gradient(ellipse at 85% 10%, rgba(67,217,189,.14), transparent 35%),
-        radial-gradient(ellipse at 10% 90%, rgba(105,170,255,.13), transparent 35%);
+      padding-block: 95px 85px;
     }
 
     .eyebrow {
       color: var(--accent);
       font-size: .82rem;
-      font-weight: 800;
-      text-transform: uppercase;
       letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: -.4px;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 7vw, 4.8rem);
-      line-height: 1.08;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      max-width: 900px;
       margin: 16px 0;
-      letter-spacing: -2px;
     }
 
-    h1 span { color: var(--accent); }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-top: 0;
+    }
 
-    .hero p {
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .highlight {
+      color: var(--accent);
+    }
+
+    .lead {
+      max-width: 790px;
       color: var(--muted);
-      max-width: 760px;
-      font-size: 1.12rem;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
     }
 
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
 
-    .btn {
+    .button {
       display: inline-block;
-      padding: 12px 18px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: 700;
+      padding: 12px 19px;
       border: 1px solid var(--accent);
+      border-radius: 9px;
+      color: #06251d;
+      background: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s ease, opacity .2s ease;
     }
 
-    .btn-primary { background: var(--accent); color: #06221f; }
-    .btn-secondary { color: var(--text); border-color: var(--border); }
-    .btn:hover { transform: translateY(-1px); }
+    .button:hover {
+      color: #06251d;
+      opacity: .9;
+      transform: translateY(-2px);
+    }
 
-    .hero-note {
-      margin-top: 24px;
+    .button.secondary {
+      color: var(--text);
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    .button.secondary:hover {
+      color: var(--accent);
+    }
+
+    .section-intro {
+      max-width: 790px;
       color: var(--muted);
-      font-size: .88rem;
+      margin-bottom: 28px;
     }
-
-    section { padding: 66px 0; }
-
-    .section-heading { margin-bottom: 28px; }
-
-    .section-heading h2 {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      line-height: 1.2;
-      margin: 8px 0;
-    }
-
-    .section-heading p, .muted { color: var(--muted); }
 
     .grid {
       display: grid;
@@ -158,137 +289,134 @@
       gap: 18px;
     }
 
-    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 23px;
-      min-width: 0;
-    }
-
-    .card h3 { margin-top: 0; line-height: 1.35; }
-    .card p { color: var(--muted); }
-    .card .symbol { font-size: 1.7rem; margin-bottom: 10px; }
-
-    .tag {
-      display: inline-block;
-      border: 1px solid rgba(67,217,189,.3);
-      background: rgba(67,217,189,.08);
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 4px 10px;
-      margin: 4px 5px 4px 0;
-      font-size: .8rem;
-    }
-
-    .about {
+    .two-column {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 24px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
       align-items: start;
     }
 
-    .highlight {
-      border-left: 3px solid var(--accent);
-      padding: 5px 0 5px 18px;
+    .card {
+      min-width: 0;
+      padding: 24px;
+      background: linear-gradient(145deg, var(--panel), rgba(16, 40, 58, .65));
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .card p {
       color: var(--muted);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      background: rgba(69, 223, 176, .08);
+      color: var(--accent);
+      border: 1px solid rgba(69, 223, 176, .24);
+      border-radius: 30px;
+      padding: 6px 11px;
+      font-size: .9rem;
+    }
+
+    .project-card {
+      border-top: 3px solid var(--accent);
+    }
+
+    .project-title {
+      font-size: 1.55rem;
     }
 
     .notice {
-      border: 1px solid rgba(255,199,102,.35);
-      background: rgba(255,199,102,.07);
-      color: #ffdda0;
-      border-radius: 12px;
-      padding: 14px 16px;
-      font-size: .92rem;
-      margin: 18px 0;
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--blue);
+      border-radius: 5px;
+      background: rgba(117, 201, 255, .08);
+      color: var(--muted);
     }
-
-    .dashboard-top {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .metric {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
-    }
-
-    .metric strong { display: block; font-size: 1.05rem; }
-    .metric span { color: var(--muted); font-size: .86rem; }
 
     #map {
+      height: 390px;
       width: 100%;
-      height: 410px;
-      border-radius: 14px;
       border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #10283a;
       z-index: 1;
     }
 
-    .map-caption { color: var(--muted); font-size: .85rem; }
-
-    .workflow {
-      list-style: none;
-      padding: 0;
-      counter-reset: step;
-    }
-
-    .workflow li {
-      counter-increment: step;
-      display: flex;
-      gap: 14px;
-      margin: 18px 0;
+    .map-caption {
       color: var(--muted);
+      font-size: .9rem;
     }
 
-    .workflow li::before {
-      content: counter(step);
-      flex: 0 0 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--panel-light);
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .contact-box {
-      background: linear-gradient(135deg, #12364a, #10263a);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 30px;
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 22px;
     }
 
     footer {
+      padding-block: 28px;
       border-top: 1px solid var(--border);
-      padding: 26px 0;
       color: var(--muted);
-      font-size: .88rem;
+      font-size: .9rem;
     }
 
-    .footer-inner {
+    footer .container {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .muted {
+      color: var(--muted);
     }
 
     @media (max-width: 760px) {
-      .grid, .grid.two, .about, .dashboard-top {
+      .grid,
+      .two-column {
         grid-template-columns: 1fr;
       }
-      .hero { padding: 60px 0; }
-      h1 { letter-spacing: -1px; }
-      nav { gap: 10px; }
-      nav a { font-size: .84rem; }
-      #map { height: 330px; }
+
+      .hero {
+        padding-block: 65px;
+      }
+
+      section {
+        padding-block: 55px;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      #map {
+        height: 320px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -297,283 +425,303 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home">ISHIMWE <span>Serge</span></a>
+
       <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#dashboard">Dashboard</a>
-        <a href="#workflow">Methodology</a>
-        <a href="#impact">Impact</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#project">Project</a>
+        <a href="#map-section">Map</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="eyebrow">AI · Earth Observation · Geospatial Research</div>
-        <h1>ISHIMWE Serge<br><span>AI Disaster Risk Dashboard</span></h1>
-        <p>
-          A research-focused project exploring how satellite Earth observation,
-          geospatial analysis, and artificial intelligence can support flood
-          risk monitoring and disaster risk reduction in Rwanda.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#dashboard">Explore Dashboard</a>
-          <a class="btn btn-secondary"
-             href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
-             target="_blank" rel="noopener noreferrer">View GitHub Project</a>
-        </div>
-        <p class="hero-note">
-          Research portfolio of ISHIMWE Serge · Rwanda · Satellite and AI applications
-        </p>
+    <section class="hero container" id="home">
+      <p class="eyebrow">Satellite Data · GIS · Climate Resilience</p>
+
+      <h1>
+        ISHIMWE Serge
+        <br>
+        <span class="highlight">Geospatial Research & Space Applications</span>
+      </h1>
+
+      <p class="lead">
+        Welcome to my professional portfolio. I am a Rwandan researcher
+        and geospatial professional interested in satellite remote sensing,
+        Geographic Information Systems (GIS), AI-assisted environmental
+        analysis, and the use of space applications to strengthen climate
+        resilience and disaster risk reduction.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button" href="#project">Explore My Project</a>
+        <a class="button secondary"
+           href="https://rw.linkedin.com/in/ishimwe-serge-2b64b633a"
+           target="_blank" rel="noopener noreferrer">
+          View LinkedIn Profile
+        </a>
       </div>
     </section>
 
     <section id="about">
-      <div class="container about">
-        <div>
-          <div class="section-heading">
-            <div class="eyebrow">About the researcher</div>
-            <h2>About ISHIMWE Serge</h2>
-          </div>
-          <p>
-            ISHIMWE Serge is the creator of the AI Disaster Risk Dashboard,
-            a project exploring the use of Earth observation, Google Earth
-            Engine, geospatial technology, and artificial intelligence
-            for flood risk monitoring in Rwanda.
-          </p>
-          <p>
-            This portfolio presents the project's goals, research workflow,
-            interactive map prototype, and potential applications for
-            disaster risk reduction and climate resilience.
-          </p>
-          <p class="highlight">
-            The project aims to support exploration and research. Any
-            operational flood-risk assessment requires appropriate data,
-            validation, and expert review.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Research interests</h3>
-          <span class="tag">Artificial Intelligence</span>
-          <span class="tag">Satellite Remote Sensing</span>
-          <span class="tag">Google Earth Engine</span>
-          <span class="tag">GIS & Geospatial Analysis</span>
-          <span class="tag">Flood Risk Monitoring</span>
-          <span class="tag">Climate Resilience</span>
-          <h3 style="margin-top:22px">Project resources</h3>
-          <p>
-            <a href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
-               target="_blank" rel="noopener noreferrer">Source code on GitHub ↗</a>
-          </p>
-          <p>
-            <a href="https://code.earthengine.google.com/f1972a844db1d1d049689064a2e9fa41"
-               target="_blank" rel="noopener noreferrer">Google Earth Engine project ↗</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="research">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Research overview</div>
-          <h2>Project objectives</h2>
-          <p>Exploring geospatial tools and satellite-derived information for disaster-risk research.</p>
-        </div>
+        <p class="eyebrow">About Me</p>
+        <h2>Research, Technology and Climate Resilience</h2>
 
-        <div class="grid">
-          <article class="card">
-            <div class="symbol">🛰️</div>
-            <h3>Satellite Earth Observation</h3>
-            <p>Explore satellite imagery and environmental indicators that may help researchers understand changing conditions across Rwanda.</p>
-          </article>
-          <article class="card">
-            <div class="symbol">🧠</div>
-            <h3>AI and Geospatial Analysis</h3>
-            <p>Investigate how geospatial data processing and machine-learning approaches could contribute to flood-risk assessment.</p>
-          </article>
-          <article class="card">
-            <div class="symbol">🌧️</div>
-            <h3>Flood Risk Research</h3>
-            <p>Develop a framework for exploring flood-related hazards and communicating research outputs through an accessible dashboard.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+        <div class="two-column">
+          <div>
+            <p>
+              My professional interests connect satellite observations,
+              geospatial technologies, data analysis, and practical
+              applications for environmental monitoring and disaster
+              risk reduction.
+            </p>
 
-    <section id="dashboard">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Interactive prototype</div>
-          <h2>Rwanda geospatial dashboard</h2>
-          <p>Explore the map and project demonstration below.</p>
-        </div>
+            <p>
+              Based in Kigali, Rwanda, I am interested in how Earth
+              observation and space technology can support evidence-based
+              planning, climate adaptation, and informed decision-making.
+            </p>
 
-        <div class="notice">
-          <strong>Prototype notice:</strong> The map is centered on Rwanda and
-          uses a standard background map. It does not show validated live flood
-          observations, official warnings, or a trained AI prediction.
-        </div>
-
-        <div class="dashboard-top">
-          <div class="metric">
-            <strong>Rwanda</strong>
-            <span>Project study area</span>
+            <p>
+              This website presents my professional interests and a
+              portfolio project exploring possible applications of
+              satellite data and AI-assisted geospatial workflows.
+            </p>
           </div>
-          <div class="metric">
-            <strong>Under development</strong>
-            <span>Research prototype status</span>
-          </div>
-          <div class="metric">
-            <strong>Not yet validated</strong>
-            <span>Flood prediction outputs</span>
-          </div>
-        </div>
 
-        <div class="card">
-          <h3>Interactive map</h3>
-          <div id="map" role="application" aria-label="Interactive map centered on Rwanda"></div>
-          <p class="map-caption">
-            Background map provided by OpenStreetMap contributors.
-            Map markers are illustrative project references, not verified hazard locations.
-          </p>
-        </div>
-
-        <div class="grid two" style="margin-top:18px">
           <div class="card">
-            <h3>Environmental indicators</h3>
-            <p>Rainfall, land cover, terrain, surface water, and satellite-derived indicators may be investigated when suitable datasets are integrated.</p>
-            <span class="tag">Data integration pending</span>
-          </div>
-          <div class="card">
-            <h3>Risk assessment</h3>
-            <p>Reliable risk outputs require documented input data, a suitable analytical method, ground-truth information, and independent validation.</p>
-            <span class="tag">Validation required</span>
+            <h3>Professional Profile</h3>
+            <p><strong>Name:</strong> ISHIMWE Serge</p>
+            <p><strong>Location:</strong> Kigali, Rwanda</p>
+            <p><strong>Focus:</strong> Satellite Data, GIS, AI and Climate Resilience</p>
+            <p><strong>Professional profile:</strong>
+              <a href="https://rw.linkedin.com/in/ishimwe-serge-2b64b633a"
+                 target="_blank" rel="noopener noreferrer">
+                LinkedIn — ISHIMWE Serge
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="workflow">
+    <section id="expertise">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Research methodology</div>
-          <h2>Proposed workflow</h2>
-          <p>A transparent workflow for developing and validating a geospatial risk-monitoring tool.</p>
-        </div>
+        <p class="eyebrow">Areas of Interest</p>
+        <h2>Technical Focus</h2>
 
-        <div class="grid two">
-          <div class="card">
-            <ol class="workflow">
-              <li><div><strong>Data collection</strong><br>Identify suitable satellite, rainfall, terrain, and reference datasets.</div></li>
-              <li><div><strong>Preprocessing</strong><br>Prepare imagery and spatial data using documented methods.</div></li>
-              <li><div><strong>Feature analysis</strong><br>Investigate environmental variables relevant to flood hazards.</div></li>
-            </ol>
-          </div>
-          <div class="card">
-            <ol class="workflow" start="4">
-              <li><div><strong>Model development</strong><br>Evaluate an appropriate analytical or machine-learning approach.</div></li>
-              <li><div><strong>Validation</strong><br>Compare outputs with reliable reference observations and report uncertainty.</div></li>
-              <li><div><strong>Communication</strong><br>Present validated results, limitations, and data sources in the dashboard.</div></li>
-            </ol>
-          </div>
-        </div>
-
-        <p>
-          <a href="https://code.earthengine.google.com/f1972a844db1d1d049689064a2e9fa41"
-             target="_blank" rel="noopener noreferrer">Open the Google Earth Engine project ↗</a>
+        <p class="section-intro">
+          These areas describe the technologies and research themes
+          explored through my professional interests and portfolio work.
+          They should not be interpreted as a claim that every tool has
+          been used in a deployed operational system.
         </p>
-      </div>
-    </section>
-
-    <section id="impact">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Potential applications</div>
-          <h2>Why this research matters</h2>
-          <p>Geospatial technology can help communicate environmental information when supported by sound methods and reliable data.</p>
-        </div>
 
         <div class="grid">
           <article class="card">
-            <h3>Disaster risk reduction</h3>
-            <p>Explore ways to organize spatial information relevant to hazard assessment and preparedness.</p>
+            <h3>Satellite Remote Sensing</h3>
+            <p>
+              Exploring Earth observation imagery and environmental
+              indicators for land monitoring, water-related hazards,
+              and climate analysis.
+            </p>
           </article>
+
           <article class="card">
-            <h3>Climate resilience</h3>
-            <p>Support research into environmental changes and their possible implications for communities.</p>
+            <h3>GIS & Geospatial Analysis</h3>
+            <p>
+              Mapping geographic information, combining spatial datasets,
+              and communicating geographic patterns through maps and
+              geospatial visualizations.
+            </p>
           </article>
+
           <article class="card">
-            <h3>Open research</h3>
-            <p>Share project methods and code so that the work can be reviewed, improved, and reproduced.</p>
+            <h3>AI & Disaster Risk Reduction</h3>
+            <p>
+              Exploring machine learning and data-driven workflows that
+              could contribute to flood susceptibility assessment and
+              disaster risk planning.
+            </p>
           </article>
         </div>
+
+        <h3 style="margin-top:30px;">Relevant Technologies</h3>
+        <ul class="tag-list">
+          <li>Google Earth Engine</li>
+          <li>Satellite Remote Sensing</li>
+          <li>GIS</li>
+          <li>Geospatial Data</li>
+          <li>Artificial Intelligence</li>
+          <li>Climate Resilience</li>
+          <li>Disaster Risk Reduction</li>
+          <li>Web Mapping</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="container">
+        <p class="eyebrow">Featured Portfolio Project</p>
+        <h2>AI Disaster Dashboard</h2>
+
+        <article class="card project-card">
+          <p class="eyebrow">Project Research Theme</p>
+
+          <h3 class="project-title">
+            Integrating AI-Driven Satellite Image Analysis into National
+            Disaster Risk Reduction Strategies
+          </h3>
+
+          <p>
+            The AI Disaster Dashboard is a portfolio project exploring
+            how satellite image analysis, geospatial data, and AI-assisted
+            workflows could support flood susceptibility assessment,
+            climate resilience, and disaster risk reduction in Rwanda
+            and other emerging space nations.
+          </p>
+
+          <h3>Project Objectives</h3>
+          <ul>
+            <li>
+              Explore the potential of satellite observations for
+              environmental and disaster-related analysis.
+            </li>
+            <li>
+              Investigate geospatial workflows for mapping areas that
+              may be susceptible to flooding.
+            </li>
+            <li>
+              Demonstrate how web mapping can help communicate
+              geographic information.
+            </li>
+            <li>
+              Explore how data-driven evidence could inform disaster
+              preparedness and planning.
+            </li>
+          </ul>
+
+          <h3>Research and Technology Links</h3>
+          <div class="hero-actions">
+            <a class="button"
+               href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
+               target="_blank" rel="noopener noreferrer">
+              View GitHub Repository
+            </a>
+
+            <a class="button secondary"
+               href="https://code.earthengine.google.com/f1972a844db1d1d049689064a2e9fa41"
+               target="_blank" rel="noopener noreferrer">
+              Open Google Earth Engine
+            </a>
+          </div>
+
+          <div class="notice">
+            <strong>Research transparency:</strong>
+            This portfolio presentation is not, by itself, evidence of
+            a validated flood forecasting system. Any operational
+            prediction would require appropriate data, model validation,
+            uncertainty assessment, and independent evaluation.
+            Do not use this demonstration alone for emergency decisions.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="map-section">
+      <div class="container">
+        <p class="eyebrow">Geographic Context</p>
+        <h2>Rwanda Map</h2>
+
+        <p class="section-intro">
+          This interactive map provides geographic context for the
+          portfolio's focus on Rwanda. It is a reference map, not a
+          live flood-risk or hazard prediction map.
+        </p>
+
+        <div id="map" role="region" aria-label="Interactive reference map centered on Rwanda"></div>
+
+        <p class="map-caption">
+          Map data and tiles © OpenStreetMap contributors.
+          An internet connection is required to load the map.
+        </p>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
-        <div class="contact-box">
-          <div class="eyebrow">Contact and collaboration</div>
-          <h2>Connect with ISHIMWE Serge</h2>
-          <p>
-            For project collaboration, research discussion, or technical feedback,
-            explore the project's public code and research resources.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary"
-               href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
-               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-            <a class="btn btn-secondary"
-               href="https://code.earthengine.google.com/f1972a844db1d1d049689064a2e9fa41"
-               target="_blank" rel="noopener noreferrer">Earth Engine Project</a>
-          </div>
-          <p class="muted">
-            Researcher: ISHIMWE Serge · Project focus: AI, satellite remote sensing,
-            geospatial analysis, and flood-risk monitoring in Rwanda.
-          </p>
+        <p class="eyebrow">Connect</p>
+        <h2>ISHIMWE Serge — Professional Profile</h2>
+
+        <p class="section-intro">
+          For professional information and updates, visit my LinkedIn
+          profile or explore the source code and project materials
+          available through GitHub.
+        </p>
+
+        <div class="contact-card">
+          <a class="button"
+             href="https://rw.linkedin.com/in/ishimwe-serge-2b64b633a"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn Profile
+          </a>
+
+          <a class="button secondary"
+             href="https://github.com/AI-DisasterSatelliteRiskFloodPrediction/AI-Disaster-Dashboard"
+             target="_blank" rel="noopener noreferrer">
+            GitHub Project
+          </a>
         </div>
+
+        <p class="muted" style="margin-top:24px;">
+          Professional interests: satellite data, remote sensing, GIS,
+          Google Earth Engine, AI-assisted geospatial analysis,
+          climate resilience, and disaster risk reduction.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> ISHIMWE Serge</span>
-      <span>AI Disaster Risk Dashboard · Rwanda</span>
+    <div class="container">
+      <span>© <span id="year">2026</span> ISHIMWE Serge</span>
+      <span>Satellite Data · GIS · Climate Resilience</span>
+      <a href="#home">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
+
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-    const map = L.map("map").setView([-1.9403, 29.8739], 8);
+    const mapElement = document.getElementById("map");
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
-      maxZoom: 19
-    }).addTo(map);
+    if (window.L && mapElement) {
+      const map = L.map("map").setView([-1.9403, 29.8739], 8);
 
-    L.marker([-1.9403, 29.8739])
-      .addTo(map)
-      .bindPopup(
-        "<strong>Rwanda study area</strong><br>Illustrative project reference. Not a flood alert."
-      );
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+      }).addTo(map);
 
-    L.circle([-1.9403, 29.8739], {
-      radius: 12000,
-      color: "#43d9bd",
-      fillColor: "#43d9bd",
-      fillOpacity: 0.12,
-      weight: 2
-    }).addTo(map).bindPopup(
-      "Illustrative map area only — not a validated risk zone."
-    );
+      L.marker([-1.9403, 29.8739])
+        .addTo(map)
+        .bindPopup(
+          "<strong>Rwanda</strong><br>Geographic context for the AI Disaster Dashboard portfolio."
+        )
+        .openPopup();
+    } else if (mapElement) {
+      mapElement.textContent =
+        "The map could not load. Please check your internet connection.";
+    }
   </script>
 </body>
 </html>
